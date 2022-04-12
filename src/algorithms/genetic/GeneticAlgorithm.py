@@ -17,25 +17,50 @@ class GeneticAlgorithm(Algorithm):
         return
 
     def perform_selection(self, population):
+        """
+        Performs a selection algorithm (tournament or roullete)
+        ...
+        Returns:
+          The two parents selected
+        """
         return
 
     def perform_crossover(self, parent1, parent2):
+        """
+        Performs a crossover algorithm (one-point or recombination)
+        ...
+        Returns:
+          The two newly generated offsprings
+        """
         return
 
-    def perform_mutation(self, chromosome):
+    def perform_mutation(self, offspring):
+        """
+        Performs mutation on the offspring with a very small random probability
+        ...
+        Returns:
+          The possibly mutated offspring 
+        """
         return
 
     def perform_reproduction(self, population):
         """
-        Applies a selection algorithm (tournament or roullete) to select the parents.
-        Applies a crossover algorithm (one-point or recombination) to generate two newly offsprings.
-        Mutates the two newly offsprings with a very small random probability.
-        Returns the population updated with the new generation.
+        Performs population reprodution
+        ...
+        Returns:
+          The new population (updated with the new generation of offsprings)
         """
         return
 
     def execute(self):
         """
+        Runs the genetic algorithm
+        ...
+        Returns:
+            The best chromosome solution
+        """
+
+        """ STEPS
         - obter população inicial
         - obter melhor cromossoma (current solution)
         - enquanto critério de paragem não for verdade
