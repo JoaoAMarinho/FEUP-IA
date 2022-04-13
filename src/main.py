@@ -2,7 +2,7 @@ from model.DataCenter import DataCenter
 from gui import *
 
 def main():
-    data_center = DataCenter('input_xl.txt')
+    data_center = DataCenter('input.txt')
     for x in data_center.solution: print(x.slots)
 
 

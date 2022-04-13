@@ -19,7 +19,7 @@ class Row:
 
         # 1st fit
         for slot in range(0, n_slots-server.size+1):
-            if any(x != -1 for x in self.slots[slot:slot+server.size]):
+            if any(val != -1 for val in self.slots[slot:slot+server.size]):
                 continue
             self.set_server(slot, server)
             return True
