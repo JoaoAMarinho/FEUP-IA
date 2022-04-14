@@ -35,12 +35,16 @@ class DataCenter:
         not_allocated = [server.id for server in self.servers]
 
         for server in self.servers:
-            for row in self.rows:
-                if row.allocate_server(server):
-                    server.set_pool(randint(0, self.pools-1))
-                    allocated.append(server.id)
-                    not_allocated.remove(server.id)
-                    break
+            for row_idx, row in enumerate(self.rows):
+                slot = row.allocate_server(server)
+                if slot == -1: # Impossible to allocate in row
+                    continue
+
+                server.set_position(slot, row_idx)
+                server.set_pool(randint(0, self.pools-1))
+                allocated.append(server.id)
+                not_allocated.remove(server.id)
+                break
 
         self.solution = { 
             'rows': self.rows,

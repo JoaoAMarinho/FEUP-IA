@@ -8,11 +8,14 @@ class Server:
         self.slot = -1
 
     def __str__(self):
-        return f"Server: {self.id}, Cap: {self.capacity}, Size: {self.size}"
+        return f"\n{self.id}, Cap: {self.capacity}, Size: {self.size}, Row: {self.row}, Slot: {self.slot}, Pool: {self.pool}"
+    
+    def __repr__(self): 
+        return self.__str__()
 
     def set_pool(self, pool):
         self.pool = pool
 
-    def set_postition(self, slot, row):
+    def set_position(self, slot, row):
         self.slot = slot
         self.row = row

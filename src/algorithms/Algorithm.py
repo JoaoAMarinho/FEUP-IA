@@ -24,7 +24,8 @@ class Algorithm():
             slots = row.slots
             
             while idx < len(slots):
-                if server_idx:=slots[idx] < 0:
+                server_idx = slots[idx]
+                if server_idx < 0:
                     idx += 1
                     continue
 
@@ -38,5 +39,7 @@ class Algorithm():
 
         evaluation = inf
         for idx in range(pools):
-            guaranteed_capacity = guaranteed_capacity[idx] - max_row_capacity[idx]
-            evaluation = min(evaluation, guaranteed_capacity)
+            guaranteed_cap = guaranteed_capacity[idx] - max_row_capacity[idx]
+            evaluation = min(evaluation, guaranteed_cap)
+        
+        return evaluation
