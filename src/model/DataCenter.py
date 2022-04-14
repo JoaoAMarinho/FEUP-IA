@@ -21,8 +21,6 @@ class DataCenter:
             row_idx, slot_idx = map(int, file.readline().strip().split())
             row = self.rows[row_idx]
             row.set_unavailable(slot_idx)
-        
-        # TODO: calculate max_available_slots for all rows
 
         for i in range(servers):
             size, capacity = map(int, file.readline().strip().split())
@@ -37,13 +35,9 @@ class DataCenter:
 
         for server in self.servers:
             for row in self.rows:
-                if server.id in allocated: # TODO: Necessary ?? server never starts allocated and is only seen once
-                    break
-                if server.size > row.max_available_slots: # TODO: Can be moved to allocate_server and remove first condition from that function
-                    continue
-
                 if row.allocate_server(server):
                     allocated.append(server.id)
                     not_allocated.remove(server.id)
+                    break
 
         self.solution = self.rows

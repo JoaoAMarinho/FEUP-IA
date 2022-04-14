@@ -1,9 +1,13 @@
+from random import uniform
+from time import perf_counter
+
 from algorithms.search.SearchAlgorithm import SearchAlgorithm
+from numpy import exp, random
 
 
 class SimulatedAnnealing(SearchAlgorithm):
-    def __init__(self, max_iterations=10000, max_execution_time=300, initial_temperature=1000, temperature_decrease_factor=0.9):
-        super.__init__(max_iterations, max_execution_time)
+    def __init__(self, initial_solution, max_iterations=10000, initial_temperature=1000, temperature_decrease_factor=0.9):
+        super.__init__(initial_solution, max_iterations)
         self.initial_temp = initial_temperature
         self.temp_decrease_factor = temperature_decrease_factor
 
@@ -11,4 +15,29 @@ class SimulatedAnnealing(SearchAlgorithm):
         return t * self.temperature_decrease_factor
 
     def execute(self):
-        return
+        start = perf_counter()
+        iteration = 0
+        iteration_no_imp = 0
+
+        solution = self.initial_solution
+        evaluation = self.evaluate(solution)
+
+        while not self.stop(iteration, iteration_no_imp):
+            iteration += 1
+            iteration_no_imp += 1
+
+            temperature = self.schedule_temperature(temperature)
+            if temperature == 0: return solution
+
+            neighbour = self.neighbour_solution(solution)
+            neighbour_evaluation = self.evaluate(neighbour)
+            delta_evaluation = neighbour_evaluation - evaluation
+
+            if delta_evaluation > 0 or random.uniform(0.0, 1.0) <= exp(delta_evaluation/temperature): 
+                solution = neighbour
+                evaluation = neighbour_evaluation
+                iteration_no_imp = 0
+    
+        elapsed = perf_counter() - start
+        
+        return solution

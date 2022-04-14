@@ -3,8 +3,9 @@ from algorithms.Algorithm import Algorithm
 
 
 class SearchAlgorithm(Algorithm):
-    def __init__(self, max_iterations=10000, max_execution_time=300):
-        super.__init__(max_iterations, max_execution_time)
+    def __init__(self, initial_solution, max_iterations=10000, max_iterations_no_imp=1000):
+        super.__init__(max_iterations, max_iterations_no_imp)
+        self.initial_solution = initial_solution
 
     def initial_solution(self):
         """

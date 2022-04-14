@@ -5,6 +5,7 @@ class Row:
 
     def set_unavailable(self, slot):
         self.slots[slot] = -2
+        self.calculate_slots()
 
     def set_server(self, slot, server):
         for i in range(server.size):
@@ -14,7 +15,7 @@ class Row:
     def allocate_server(self, server):
         n_slots = len(self.slots)
 
-        if server.size > len(self.slots):
+        if server.size > self.max_available_slots:
             return False
 
         # 1st fit

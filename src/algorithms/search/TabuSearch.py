@@ -2,9 +2,8 @@ from algorithms.search.SearchAlgorithm import SearchAlgorithm
 
 
 class TabuSearch(SearchAlgorithm):
-    def __init__(self, max_iterations=10000, max_execution_time=300, tabu_tenure=3):
-        self.max_iterations = max_iterations
-        self.max_execution_time = max_execution_time
+    def __init__(self, initial_solution, tabu_tenure=3, max_iterations=10000):
+        super.__init__(initial_solution, max_iterations)
         self.tabu_tenure = tabu_tenure
         self.tabu_memory = {}  # a solução devia ser hashable, assim faríamos uma hash table em que cada entrada key:value continha a solução como key e o respetivo valor de tt como value
 
@@ -17,5 +16,4 @@ class TabuSearch(SearchAlgorithm):
         - até critério de paragem não se verificar
           - selecionar melhor solução da lista de candidatas que não seja tabu (vamos querer ter aspiration criteria??)
           - se avaliação for melhor que a da atual, atualizar solução atual e tabu memory
-        """
-        return
+        """          
