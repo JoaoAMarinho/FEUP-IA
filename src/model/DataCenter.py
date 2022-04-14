@@ -1,5 +1,7 @@
 from model.Row import Row
 from model.Server import Server
+from random import randint
+
 
 
 class DataCenter:
@@ -14,8 +16,7 @@ class DataCenter:
         rows, slots, unavailable, self.pools, servers = (
             map(int, file.readline().strip().split()))
 
-        for i in range(rows):
-            self.rows.append(Row(slots))
+        self.rows = [Row(slots) for _ in range(rows)]
 
         for i in range(unavailable):
             row_idx, slot_idx = map(int, file.readline().strip().split())
@@ -36,8 +37,13 @@ class DataCenter:
         for server in self.servers:
             for row in self.rows:
                 if row.allocate_server(server):
+                    server.set_pool(randint(0, self.pools-1))
                     allocated.append(server.id)
                     not_allocated.remove(server.id)
                     break
 
-        self.solution = self.rows
+        self.solution = { 
+            'rows': self.rows,
+            'servers': self.servers,
+            'pools': self.pools
+        }

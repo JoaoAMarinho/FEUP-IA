@@ -1,4 +1,5 @@
 from abc import abstractmethod
+from math import inf
 
 
 class Algorithm():
@@ -14,5 +15,28 @@ class Algorithm():
         return iteration >= self.max_iterations or iteration_no_imp >= self.max_iterations_no_imp
 
     def evaluate(self, solution):
-        
-        pass
+        rows, servers, pools = solution.values()
+        guaranteed_capacity = [ 0 for _ in range(pools) ]
+        max_row_capacity = [ 0 for _ in range(pools) ]
+        for row in rows:
+            idx = 0
+            row_capacity = [ 0 for _ in range(pools) ]
+            slots = row.slots
+            
+            while idx < len(slots):
+                if server_idx:=slots[idx] < 0:
+                    idx += 1
+                    continue
+
+                server = servers[server_idx]
+                row_capacity[server.pool] += server.capacity
+                idx += server.size
+            
+            for idx in range(pools):
+                max_row_capacity[idx] = max(max_row_capacity[idx], row_capacity[idx])
+                guaranteed_capacity[idx] += row_capacity[idx]
+
+        evaluation = inf
+        for idx in range(pools):
+            guaranteed_capacity = guaranteed_capacity[idx] - max_row_capacity[idx]
+            evaluation = min(evaluation, guaranteed_capacity)

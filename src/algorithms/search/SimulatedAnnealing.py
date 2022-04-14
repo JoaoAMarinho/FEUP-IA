@@ -1,8 +1,7 @@
-from random import uniform
 from time import perf_counter
+from numpy import exp, random
 
 from algorithms.search.SearchAlgorithm import SearchAlgorithm
-from numpy import exp, random
 
 
 class SimulatedAnnealing(SearchAlgorithm):
