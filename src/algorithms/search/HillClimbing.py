@@ -5,7 +5,7 @@ from algorithms.search.SearchAlgorithm import SearchAlgorithm
 
 class HillClimbing(SearchAlgorithm):
     def __init__(self, initial_solution, max_iterations=10000, max_iterations_no_imp=1000):
-        super.__init__(initial_solution, max_iterations, max_iterations_no_imp)
+        super().__init__(initial_solution, max_iterations, max_iterations_no_imp)
 
         def execute(self):
             start = perf_counter()

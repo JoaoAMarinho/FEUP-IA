@@ -3,7 +3,7 @@ from algorithms.search.SearchAlgorithm import SearchAlgorithm
 
 class TabuSearch(SearchAlgorithm):
     def __init__(self, initial_solution, tabu_tenure=3, max_iterations=10000):
-        super.__init__(initial_solution, max_iterations)
+        super().__init__(initial_solution, max_iterations)
         self.tabu_tenure = tabu_tenure
         self.tabu_memory = {}  # a solução devia ser hashable, assim faríamos uma hash table em que cada entrada key:value continha a solução como key e o respetivo valor de tt como value
 

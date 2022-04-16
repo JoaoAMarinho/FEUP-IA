@@ -3,7 +3,7 @@ from algorithms.Algorithm import Algorithm
 
 class GeneticAlgorithm(Algorithm):
     def __init__(self, max_iterations=10000, max_execution_time=300):
-        super.__init__(max_iterations, max_execution_time)
+        super().__init__(max_iterations, max_execution_time)
 
     def fittest_chromosome(self, population):
         """

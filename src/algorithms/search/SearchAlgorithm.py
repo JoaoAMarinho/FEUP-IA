@@ -1,24 +1,31 @@
 from random import randint
+from copy import deepcopy
 from algorithms.Algorithm import Algorithm
 
 
 class SearchAlgorithm(Algorithm):
     def __init__(self, initial_solution, max_iterations=10000, max_iterations_no_imp=1000):
-        super.__init__(max_iterations, max_iterations_no_imp)
+        super().__init__(max_iterations, max_iterations_no_imp)
         self.initial_solution = initial_solution
 
-    def initial_solution(self):
-        """
-        Obtains the initial solution 
-        (tal como está implementado na classe DataCenter, acho que faz sentido que esteja antes aqui)
-        """
-        pass
-
-    def __change_pool(self, solution):
+    def change_pool(self, solution):
         """
         Generates a neighbour solution by changing the pool of a randomly selected server from the original solution
         """
-        return
+
+        if solution['pools'] <= 1: 
+            return solution
+
+        new_solution = deepcopy(solution)
+        _, servers, pools = new_solution.values()
+
+        allocated = [server for server in servers if server.pool != -1]
+        server = allocated[randint(0, len(allocated) - 1)]
+        while (new_pool:=randint(0, pools - 1)) == server.pool:
+            pass
+
+        server.pool = new_pool
+        return new_solution
 
     def __change_row(self, solution):
         """

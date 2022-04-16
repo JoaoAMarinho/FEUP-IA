@@ -6,7 +6,7 @@ from algorithms.search.SearchAlgorithm import SearchAlgorithm
 
 class SimulatedAnnealing(SearchAlgorithm):
     def __init__(self, initial_solution, max_iterations=10000, initial_temperature=1000, temperature_decrease_factor=0.9):
-        super.__init__(initial_solution, max_iterations)
+        super().__init__(initial_solution, max_iterations)
         self.initial_temp = initial_temperature
         self.temp_decrease_factor = temperature_decrease_factor
 
