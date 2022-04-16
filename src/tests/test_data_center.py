@@ -1,6 +1,5 @@
-import unittest
+from config_import import *
 from algorithms.search.SearchAlgorithm import SearchAlgorithm
-from model.DataCenter import DataCenter
 
 class TestDataCenter(unittest.TestCase):
 
@@ -23,13 +22,6 @@ class TestDataCenter(unittest.TestCase):
     def test_algorithm_evaluate(self):
         solution = self.data_center.solution
         print(f'Eval: {self.algorithm.evaluate(solution)}')
-
-    def test_change_pool(self):
-        algorithm = self.algorithm
-        new_sol = algorithm.change_pool(algorithm.initial_solution)
-        for key, value in new_sol.items():
-            print('\n')
-            print(key, ' : ', value)
 
 if __name__ == '__main__':
     unittest.main()
