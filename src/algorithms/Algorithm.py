@@ -22,7 +22,7 @@ class Algorithm(ABC):
         Generates a neighbour solution by changing the pool of a randomly selected server from the original solution
         """
 
-        if solution['pools'] <= 1: 
+        if solution.pools <= 1: 
             return solution
 
         new_solution = deepcopy(solution)
@@ -34,6 +34,7 @@ class Algorithm(ABC):
         possibilities = [ p for p in range(0, pools) if p != server.pool ]
         server.pool = choice(possibilities)
 
+        new_solution.evaluate()
         return new_solution
 
     def change_row(self, solution):
@@ -55,6 +56,8 @@ class Algorithm(ABC):
 
         rows[server.row].unset_server(server)
         server.set_position(new_slot, new_row_idx)
+        
+        new_solution.evaluate()
         return new_solution
        
     def allocate_server(self, solution):
@@ -77,6 +80,8 @@ class Algorithm(ABC):
         
         server.set_position(slot, new_row_idx)
         server.set_pool(randint(0, pools - 1))
+
+        new_solution.evaluate()
         return new_solution
         
     def swap_allocation(self, solution):       
@@ -103,6 +108,7 @@ class Algorithm(ABC):
             to_allocate.set_position(to_deallocate.slot, to_deallocate.row)
             to_allocate.set_pool(to_deallocate.pool)
             to_deallocate.unset()
+            new_solution.evaluate()
             return new_solution
 
         return solution
@@ -134,6 +140,7 @@ class Algorithm(ABC):
         server1.set_position(server2.slot, server2.row)   
         server2.set_position(server1_old_slot, server1_old_row)
              
+        new_solution.evaluate()
         return new_solution
 
     def neighbour_solution(self, solution):
@@ -149,6 +156,19 @@ class Algorithm(ABC):
 
         selected_operator = randint(0, len(operators) - 1)
         return operators[selected_operator](solution)
+    
+    def neighbour_solutions(self, solution):
+        """
+        Obtains neighbour solution by applying one of the available strategies
+        """
+
+        operators = [self.change_pool, 
+                     self.change_row, 
+                     self.allocate_server, 
+                     self.swap_allocation, 
+                     self.swap_allocated_servers]
+        
+        return [operator(solution) for operator in operators]
 
     def get_best_solution(self, solution):
         return max(solution, key= lambda sol: sol.evaluation)
