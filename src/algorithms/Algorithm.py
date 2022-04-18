@@ -55,7 +55,7 @@ class Algorithm(ABC):
             return solution
 
         new_solution = deepcopy(solution)
-        _, servers, pools = new_solution.values()
+        servers, pools = new_solution.servers, new_solution.pools
 
         allocated = [server for server in servers if server.pool != -1]
         server = allocated[randint(0, len(allocated) - 1)]
@@ -70,7 +70,7 @@ class Algorithm(ABC):
         """
 
         new_solution = deepcopy(solution)
-        rows, servers, _ = new_solution.values()
+        servers, rows = new_solution.servers, new_solution.rows
 
         allocated = [server for server in servers if server.pool != -1]
         
@@ -91,7 +91,7 @@ class Algorithm(ABC):
         """
         
         new_solution = deepcopy(solution)
-        rows, servers, pools = new_solution.values()
+        servers, rows, pools = new_solution.servers, new_solution.rows, new_solution.pools
 
         deallocated = [server for server in servers if server.pool == -1]
         if len(deallocated) == 0: return solution
@@ -113,7 +113,7 @@ class Algorithm(ABC):
         """
                 
         new_solution = deepcopy(solution)
-        rows, servers, _ = new_solution.values()
+        servers, rows = new_solution.servers, new_solution.rows
 
         deallocated = [server for server in servers if server.pool == -1]
         if len(deallocated) == 0: return solution
@@ -141,7 +141,7 @@ class Algorithm(ABC):
         """
                 
         new_solution = deepcopy(solution)
-        rows, servers, _ = new_solution.values()
+        servers, rows = new_solution.servers, new_solution.rows
 
         allocated = [server for server in servers if server.pool != -1]
         if len(allocated) < 2: return solution
@@ -177,3 +177,6 @@ class Algorithm(ABC):
 
         selected_operator = randint(0, len(operators) - 1)
         return operators[selected_operator](solution)
+
+    def get_best_solution(self, solution):
+        return max(solution, key= lambda sol: sol.evaluation)
