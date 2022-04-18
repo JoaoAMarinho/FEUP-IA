@@ -14,9 +14,6 @@ class CrossoverMethod(ABC):
 
 
 class ServersCrossover(CrossoverMethod):
-    """
-    TO DO
-    """
 
     def run(self, parent1, parent2):
         """
@@ -27,21 +24,46 @@ class ServersCrossover(CrossoverMethod):
         """
         
         offspring1, offspring2 = deepcopy(parent1), deepcopy(parent2)
-        _, servers1, _ = offspring1
-        _, servers2, _ = offspring2
+        servers1, rows1 = offspring1.servers, offspring1.rows
+        servers2, rows2 = offspring2.servers, offspring2.rows
 
-        crossover_point = len(offspring1['servers']) // 2
-        for idx in range(0, crossover_point):
-          
+        crossover_point = len(servers1) // 2
+
+        # deallocate right half of servers
+        for idx in range(crossover_point, len(servers1)):
+            server1, server2 = servers1[idx], servers2[idx]
+
+            if server1.pool != -1:
+                rows1.unset_server(server1)
+                server1.unset()
+            
+            if server2.pool != -1:
+                rows2.unset_server(server2)
+                server2.unset()
+        
+        # try to allocate new right half of servers
+        for idx in range(crossover_point, len(servers1)):
+            server1, server2 = servers1[idx], servers2[idx]
+            initial_server1, initial_server2 = parent1.servers[idx], parent2.servers[idx]
+
+            if initial_server1.pool != -1:
+                row, slot = initial_server1.row, initial_server1.slot
+                if rows2[row].allocate_server_to_slot(server2, slot):
+                    server2.set_position(slot, row)
+                    server2.set_pool = initial_server1.pool
+
+            if initial_server2.pool != -1:
+                row, slot = initial_server2.row, initial_server2.slot
+                if rows1[row].allocate_server_to_slot(server1, slot):
+                    server1.set_position(slot, row)
+                    server1.set_pool = initial_server2.pool
+    
+        return [offspring1, offspring2]
 
 
-        return
 
 
 class PoolsCrossover(CrossoverMethod):
-    """
-    TO DO
-    """
 
     def run(self, parent1, parent2):
         """
@@ -52,12 +74,17 @@ class PoolsCrossover(CrossoverMethod):
         """
 
         offspring1, offspring2 = deepcopy(parent1), deepcopy(parent2)
-        _, servers1, _ = offspring1
-        _, servers2, _ = offspring2
+        servers1 = offspring1.servers
+        servers2 = offspring2.servers
 
-        crossover_point = len(offspring1['servers']) // 2
-        for idx in range(0, crossover_point):
-            # se a pool do server idx da offs1 != -1 entao mudar para pool do server idx do pai2 (caso este não seja -1)  
-            # se a pool do server idx da offs2 != -1 entao mudar para pool do server idx do pai1 (caso este não seja -1)    
+        crossover_point = len(servers1) // 2
+        for idx in range(crossover_point, len(servers1)):
+            server1 = servers1[idx]
+            server2 = servers2[idx]
 
-        pass
+            if server1.pool != -1:
+                server1.pool = new_pool if (new_pool:=parent2.servers[idx].pool) != -1 else server1.pool
+            if server2.pool != -1:
+                server2.pool = new_pool if (new_pool:=parent1.servers[idx].pool) != -1 else server2.pool
+
+        return [offspring1, offspring2]

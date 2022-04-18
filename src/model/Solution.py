@@ -2,11 +2,11 @@ from functools import reduce
 from math import inf
 
 class Solution:
-    def __init__(self, rows=[], servers=[], pools=[]):
+    def __init__(self, rows=[], servers=[], pools=1):
         self.rows = rows
         self.servers = servers
         self.pools = pools
-        self.evaluation = self.evaluate()
+        self.evaluate()
     
     def __str__(self):
         str_repr = ':::::::::::::::::::::::::::::::: rows ::::::::::::::::::::::::::::::::n'
@@ -16,7 +16,7 @@ class Solution:
         for server in self.servers: str_repr += f'{server}\n'
 
         str_repr += '\n\n:::::::::::::::::::::::::::::::: pools ::::::::::::::::::::::::::::::::\n'
-        for pool in self.pools: str_repr += f'{pool}\n'
+        str_repr += f'{self.pools}\n'
 
         return str_repr
 
