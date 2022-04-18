@@ -1,10 +1,8 @@
 from time import perf_counter
 from numpy import exp, random
+from algorithms.Algorithm import Algorithm
 
-from algorithms.search.SearchAlgorithm import SearchAlgorithm
-
-
-class SimulatedAnnealing(SearchAlgorithm):
+class SimulatedAnnealing(Algorithm):
     def __init__(self, initial_solution, max_iterations=10000, initial_temperature=1000, temperature_decrease_factor=0.9):
         super().__init__(initial_solution, max_iterations)
         self.initial_temp = initial_temperature
