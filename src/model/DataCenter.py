@@ -1,7 +1,7 @@
 from model.Row import Row
 from model.Server import Server
+from model.Solution import Solution
 from random import randint
-
 
 
 class DataCenter:
@@ -37,17 +37,14 @@ class DataCenter:
         for server in self.servers:
             for row_idx, row in enumerate(self.rows):
                 slot = row.allocate_server(server)
-                if slot == -1: # Impossible to allocate in row
-                    continue
+
+                # impossible to allocate in row
+                if slot == -1: continue
 
                 server.set_position(slot, row_idx)
                 server.set_pool(randint(0, self.pools-1))
                 allocated.append(server.id)
                 not_allocated.remove(server.id)
                 break
-
-        self.solution = { 
-            'rows': self.rows,
-            'servers': self.servers,
-            'pools': self.pools
-        }
+        
+        return Solution(self.rows, self.servers, self.pools)

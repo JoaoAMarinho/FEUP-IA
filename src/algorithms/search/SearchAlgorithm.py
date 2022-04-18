@@ -1,7 +1,8 @@
 from random import randint
 from copy import deepcopy
-from algorithms.Algorithm import Algorithm
 
+from algorithms.Algorithm import Algorithm
+from model.Solution import Solution
 
 class SearchAlgorithm(Algorithm):
     def __init__(self, initial_solution, max_iterations=10000, max_iterations_no_imp=1000):
@@ -17,7 +18,8 @@ class SearchAlgorithm(Algorithm):
             return solution
 
         new_solution = deepcopy(solution)
-        _, servers, pools = new_solution.values()
+        servers = new_solution.servers
+        pools = new_solution.pools
 
         allocated = [server for server in servers if server.pool != -1]
         server = allocated[randint(0, len(allocated) - 1)]
@@ -53,3 +55,13 @@ class SearchAlgorithm(Algorithm):
         operators = [self.__change_pool, self.__change_row, self.__change_slot, self.__swap_allocation]
         selected_operator = randint(0, len(operators) - 1)
         return operators[selected_operator](solution)
+
+    def neighbour_solutions(self, solution):
+        """
+        Obtains neighbour solution by applying one of the available strategies
+        """
+
+        return [self.__change_pool, self.__change_row, self.__change_slot, self.__swap_allocation]
+
+    def get_best_solution(self, solution):
+        return max(solution, key= lambda sol: sol.evaluation)

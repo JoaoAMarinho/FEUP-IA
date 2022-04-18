@@ -19,7 +19,7 @@ class SimulatedAnnealing(SearchAlgorithm):
         iteration_no_imp = 0
 
         solution = self.initial_solution
-        evaluation = self.evaluate(solution)
+        evaluation = solution.evaluation
 
         while not self.stop(iteration, iteration_no_imp):
             iteration += 1
@@ -29,7 +29,7 @@ class SimulatedAnnealing(SearchAlgorithm):
             if temperature == 0: return solution
 
             neighbour = self.neighbour_solution(solution)
-            neighbour_evaluation = self.evaluate(neighbour)
+            neighbour_evaluation = neighbour.evaluation
             delta_evaluation = neighbour_evaluation - evaluation
 
             if delta_evaluation > 0 or random.uniform(0.0, 1.0) <= exp(delta_evaluation/temperature): 

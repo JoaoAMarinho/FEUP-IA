@@ -13,14 +13,14 @@ class HillClimbing(SearchAlgorithm):
             iteration_no_imp = 0
 
             solution = self.initial_solution
-            evaluation = self.evaluate(solution)
+            evaluation = solution.evaluation
             
             while not self.stop(iteration, iteration_no_imp):
                 iteration += 1
                 iteration_no_imp += 1
 
                 neighbour = self.neighbour_solution(solution)
-                neighbour_evaluation = self.evaluate(neighbour)
+                neighbour_evaluation = neighbour.evaluation
 
                 if (neighbour_evaluation > evaluation): 
                     solution = neighbour
