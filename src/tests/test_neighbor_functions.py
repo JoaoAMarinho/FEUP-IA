@@ -17,14 +17,13 @@ class TestNeighborFunc(unittest.TestCase):
         algorithm = self.algorithm
         new_sol = algorithm.change_pool(algorithm.initial_solution)
         
-        print('Change Pool')
         for key, value in new_sol.items():
             print('\n')
             print(key, ' : ', value)
     
     def test_change_row(self):
         algorithm = self.algorithm
-        new_sol = algorithm.change_pool(algorithm.initial_solution)
+        new_sol = algorithm.change_row(algorithm.initial_solution)
         
         print('Change Row')
         for key, value in new_sol.items():

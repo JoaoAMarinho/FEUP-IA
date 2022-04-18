@@ -18,6 +18,11 @@ class Row:
             self.slots[slot + i] = server.id
         self.calculate_slots()
 
+    def unset_server(self, server):
+        for i in range(server.size):
+            self.slots[server.slot + i] = -1
+        self.calculate_slots()
+
     def allocate_server(self, server):
         n_slots = len(self.slots)
 
@@ -32,6 +37,15 @@ class Row:
             return slot
 
         return -1
+
+    def allocate_server_to_slot(self, server, slot):
+        if server.size > self.max_available_slots: 
+            return False
+        if any(val != -1 for val in self.slots[slot:slot+server.size]): 
+            return False
+        self.set_server(slot, server)
+        return True
+
 
     def calculate_slots(self):
         available_slots = 0

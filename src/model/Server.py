@@ -19,3 +19,8 @@ class Server:
     def set_position(self, slot, row):
         self.slot = slot
         self.row = row
+
+    def unset(self):
+        self.slot = -1
+        self.row = -1
+        self.pool = -1
