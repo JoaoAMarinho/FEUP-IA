@@ -1,11 +1,14 @@
 from tkinter import *
+from turtle import onclick
 from PIL import ImageTk, Image
-
-from matplotlib.ft2font import BOLD
+from model.DataCenter import DataCenter
 
 WIDTH = 910
 bg_color = '#1E4154'
 fontc = 'Calibri'
+
+def start():
+    data_center = DataCenter(inputfile.get())
 
 window = Tk()
 
@@ -26,10 +29,15 @@ Label(window, image=small_circle, background=bg_color, width=300).place(x=600,y=
 Button(window, text='Additional\ninfo', font=(fontc,18), command= print('oi'), fg='white',background='#5A9BC0', bd=0, cursor='hand2').place(x=690,y=140)
 
 Label(window, image=big_circle, background=bg_color, width=300).place(x=300,y=130)
-Button(window, text='START', font=(fontc,35,'bold'), command= print('oi'), fg='white',background='#306A8A', bd=0, cursor='hand2').place(x=370,y=200)
+Button(window, text='START', font=(fontc,35,'bold'), fg='white',background='#306A8A', bd=0, cursor='hand2', command=start).place(x=370,y=200)
 
 inputfile = StringVar(window, value='input.txt')
 Label(window, image=medium_circle, background=bg_color, width=300).place(x=570,y=300)
-Entry(window, textvariable = inputfile, fg='white',width=9, font=(fontc,23,'italic'), background='#4A5D68').place(x=673,y=370)
+Entry(window, textvariable = inputfile, fg='white',width=9, font=(fontc,23,'italic'), background='#4A5D68').place(x=670,y=370)
 
-window.mainloop()
+
+
+
+def display():
+    window.mainloop()
+

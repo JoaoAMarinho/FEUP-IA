@@ -1,9 +1,8 @@
 from model.DataCenter import DataCenter
-from gui import *
+from gui import display
 
 def main():
-    data_center = DataCenter('input.txt')
-    for x in data_center.solution: print(x.slots)
+    display()
 
 
 if __name__ == '__main__':

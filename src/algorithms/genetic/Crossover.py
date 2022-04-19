@@ -32,7 +32,8 @@ class ServersCrossover(CrossoverMethod):
         # deallocate right half of servers
         for idx in range(crossover_point, len(servers1)):
             server1, server2 = servers1[idx], servers2[idx]
-
+            
+            # if server is allocated
             if server1.pool != -1:
                 rows1.unset_server(server1)
                 server1.unset()

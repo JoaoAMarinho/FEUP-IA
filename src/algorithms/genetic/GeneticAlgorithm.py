@@ -132,4 +132,4 @@ class GeneticAlgorithm(Algorithm):
 
         elapsed = perf_counter() - start
 
-        return population
+        return fittest
