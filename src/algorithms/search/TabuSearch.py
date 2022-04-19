@@ -1,12 +1,12 @@
 
 from time import perf_counter
 
-from algorithms.search.SearchAlgorithm import SearchAlgorithm
+from algorithms.Algorithm import Algorithm
 
 
-class TabuSearch(SearchAlgorithm):
-    def __init__(self, initial_solution, tabu_tenure=3, max_iterations=10000):
-        super().__init__(initial_solution, max_iterations)
+class TabuSearch(Algorithm):
+    def __init__(self, initial_solution, tabu_tenure=3, max_iterations=10000, max_iterations_no_imp=1000):
+        super().__init__(initial_solution, max_iterations, max_iterations_no_imp)
         self.tabu_tenure = tabu_tenure
         self.tabu_memory = {}  
 

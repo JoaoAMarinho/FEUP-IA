@@ -9,7 +9,7 @@ class SimulatedAnnealing(Algorithm):
         self.temp_decrease_factor = temperature_decrease_factor
 
     def schedule_temperature(self, t):
-        return t * self.temperature_decrease_factor
+        return t * self.temp_decrease_factor
 
     def execute(self):
         start = perf_counter()
@@ -18,6 +18,7 @@ class SimulatedAnnealing(Algorithm):
 
         solution = self.initial_solution
         evaluation = solution.evaluation
+        temperature = self.initial_temp
 
         while not self.stop(iteration, iteration_no_imp):
             iteration += 1

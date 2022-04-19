@@ -155,6 +155,7 @@ class Algorithm(ABC):
                      self.swap_allocated_servers]
 
         selected_operator = randint(0, len(operators) - 1)
+        operators[selected_operator](solution).evaluate()
         return operators[selected_operator](solution)
     
     def neighbour_solutions(self, solution):

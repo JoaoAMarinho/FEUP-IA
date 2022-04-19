@@ -9,7 +9,14 @@ fontc = 'Calibri'
 
 def start():
     data_center = DataCenter(inputfile.get())
+    
 
+
+
+
+
+
+# GUI settings
 window = Tk()
 
 window.geometry('900x500')

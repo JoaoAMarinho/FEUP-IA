@@ -41,6 +41,10 @@ class Row:
     def allocate_server_to_slot(self, server, slot):
         if server.size > self.max_available_slots: 
             return False
+        
+        if len(self.slots)-slot < server.size:
+            return False
+            
         if any(val != -1 for val in self.slots[slot:slot+server.size]): 
             return False
         self.set_server(slot, server)

@@ -20,5 +20,7 @@ class TestDataCenter(unittest.TestCase):
         solution = self.data_center.initial_solution()
         print(f'Evaluation: {solution.evaluation}')
 
+    
+
 if __name__ == '__main__':
     unittest.main()

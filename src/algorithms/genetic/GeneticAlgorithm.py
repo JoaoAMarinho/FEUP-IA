@@ -4,7 +4,7 @@ from time import perf_counter
 
 from algorithms.Algorithm import Algorithm
 from algorithms.genetic.Selection import TournamentSelection, RoulleteSelection
-from algorithms.genetic.Crossover import OnePointCrossover, RecombinationCrossover
+from algorithms.genetic.Crossover import ServersCrossover, PoolsCrossover
 
 class GeneticAlgorithm(Algorithm):
     def __init__(self, 
@@ -14,7 +14,7 @@ class GeneticAlgorithm(Algorithm):
                  population_size=30, 
                  mutation_threshold=0.2, 
                  selection_method=TournamentSelection, 
-                 crossover_method=RecombinationCrossover):
+                 crossover_method=PoolsCrossover):
 
         super().__init__(max_iterations, max_iterations_no_imp)
         self.population_size = population_size
@@ -28,7 +28,7 @@ class GeneticAlgorithm(Algorithm):
         Gets the fittest chromosome in the population
         """
 
-        return max(population, key=lambda solution: solution['fitness'])
+        return max(population, key=lambda solution: solution.fitness)
 
     def initial_population(self):
         """
@@ -41,11 +41,12 @@ class GeneticAlgorithm(Algorithm):
             # changing pools
 
             new_solution = deepcopy(self.initial_solution)
-            _, servers, pools = new_solution.values()
+            servers = new_solution.servers
+            pools = new_solution.pools
             #selected = [selection(pop, scores) for _ in range(n_pop)]
             server = servers[randint(0, len(servers)-1)]
             pools_array = [pool for pool in range(0, pools) if pool != server.pool]
-            server.pool = pools_array[randint(0, pools - 1)]
+            server.pool = pools_array[randint(0, len(pools_array) - 1)]
 
             # changing all servers' pools
             '''
@@ -54,7 +55,7 @@ class GeneticAlgorithm(Algorithm):
               server.pool = pools_array[randint(0, pools - 1)]
             '''
 
-            new_solution['fitness'] = self.evaluate(new_solution)
+            new_solution.fitness = new_solution.evaluation
             population.append(new_solution)
 
         return population
@@ -118,7 +119,7 @@ class GeneticAlgorithm(Algorithm):
         population = self.initial_population()
         fittest = self.fittest_chromosome(population)
 
-        while not self.stop(iteration):
+        while not self.stop(iteration, iteration_no_imp):
             iteration += 1
             iteration_no_imp += 1
 
