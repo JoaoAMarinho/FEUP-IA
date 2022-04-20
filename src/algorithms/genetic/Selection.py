@@ -38,7 +38,7 @@ class TournamentSelection(SelectionMethod):
                 population=population,
                 k=nr_competitors
             )
-            fittest = max(sample_population, key=lambda solution: solution['fitness'])
+            fittest = max(sample_population, key=lambda solution: solution.evaluation)
             selection.append(fittest)
         
         return selection
@@ -57,7 +57,7 @@ class RoulleteSelection(SelectionMethod):
             List with the randomly selected population
         """
 
-        fitness = [solution['fitness'] for solution in population]
+        fitness = [solution.evaluation for solution in population]
         min_fitness = min(fitness)
         fitness = [fit - min_fitness + 1 for fit in fitness]
 

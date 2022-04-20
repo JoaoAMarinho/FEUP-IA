@@ -1,7 +1,6 @@
 from abc import abstractmethod, ABC
 from random import randint, choice
 from copy import deepcopy
-from math import inf
 
 
 class Algorithm(ABC):
@@ -29,6 +28,8 @@ class Algorithm(ABC):
         servers, pools = new_solution.servers, new_solution.pools
 
         allocated = [server for server in servers if server.pool != -1]
+        if len(allocated) == 0: return solution
+
         server = allocated[randint(0, len(allocated) - 1)]
 
         possibilities = [ p for p in range(0, pools) if p != server.pool ]
@@ -46,13 +47,14 @@ class Algorithm(ABC):
         servers, rows = new_solution.servers, new_solution.rows
 
         allocated = [server for server in servers if server.pool != -1]
-        
+        if len(allocated) == 0: return solution
+
         server = allocated[randint(0, len(allocated) - 1)]
         
         new_row_idx = randint(0, len(rows) - 1)
         new_row = rows[new_row_idx]
         
-        if new_slot:=new_row.allocate_server(server) == -1: return solution
+        if (new_slot:=new_row.allocate_server(server)) == -1: return solution
 
         rows[server.row].unset_server(server)
         server.set_position(new_slot, new_row_idx)
@@ -92,11 +94,15 @@ class Algorithm(ABC):
         new_solution = deepcopy(solution)
         servers, rows = new_solution.servers, new_solution.rows
 
-        deallocated = [server for server in servers if server.pool == -1]
-        if len(deallocated) == 0: return solution
+        allocated = deallocated= []
 
-        allocated = [server for server in servers if server.pool != -1]
-        if len(allocated) == 0: return solution
+        for server in servers:
+            if server.pool != -1:
+                allocated.append(server)
+            else:
+                deallocated.append(server)
+
+        if (len(deallocated) == 0) or (len(allocated) == 0): return solution
 
         to_deallocate = allocated[randint(0, len(allocated) - 1)]
         to_allocate = deallocated[randint(0, len(deallocated) - 1)]
@@ -147,16 +153,20 @@ class Algorithm(ABC):
         """
         Obtains neighbour solution by applying one of the available strategies
         """
-
+    
         operators = [self.change_pool, 
                      self.change_row, 
-                     self.allocate_server, 
+                     self.allocate_server,
                      self.swap_allocation, 
                      self.swap_allocated_servers]
 
         selected_operator = randint(0, len(operators) - 1)
-        operators[selected_operator](solution).evaluate()
-        return operators[selected_operator](solution)
+        new_solution = operators[selected_operator](solution)
+        new_solution.evaluate()
+        if(new_solution.evaluation == 2 or new_solution.evaluation == 3 or new_solution.evaluation == 1 or new_solution.evaluation == 4): 
+            print("error ", selected_operator)
+            print(new_solution.rows)
+        return new_solution
     
     def neighbour_solutions(self, solution):
         """
@@ -169,7 +179,13 @@ class Algorithm(ABC):
                      self.swap_allocation, 
                      self.swap_allocated_servers]
         
-        return [operator(solution) for operator in operators]
+        solutions = []
+        for operator in operators:
+            new_solution = operator(solution)
+            new_solution.evaluate()
+            solutions.append(new_solution)
+        
+        return solutions
 
     def get_best_solution(self, solution):
         return max(solution, key= lambda sol: sol.evaluation)

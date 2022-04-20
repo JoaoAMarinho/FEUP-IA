@@ -13,8 +13,8 @@ class GeneticAlgorithm(Algorithm):
                  max_iterations_no_imp=1000, 
                  population_size=30, 
                  mutation_threshold=0.2, 
-                 selection_method=TournamentSelection, 
-                 crossover_method=PoolsCrossover):
+                 selection_method=TournamentSelection(), 
+                 crossover_method=PoolsCrossover()):
 
         super().__init__(max_iterations, max_iterations_no_imp)
         self.population_size = population_size
@@ -28,7 +28,7 @@ class GeneticAlgorithm(Algorithm):
         Gets the fittest chromosome in the population
         """
 
-        return max(population, key=lambda solution: solution.fitness)
+        return max(population, key=lambda solution: solution.evaluation)
 
     def initial_population(self):
         """
@@ -55,7 +55,6 @@ class GeneticAlgorithm(Algorithm):
               server.pool = pools_array[randint(0, pools - 1)]
             '''
 
-            new_solution.fitness = new_solution.evaluation
             population.append(new_solution)
 
         return population
@@ -72,7 +71,7 @@ class GeneticAlgorithm(Algorithm):
         if probability <= self.mutation_threshold:
           mutant = deepcopy(offspring)
           mutant = self.neighbour_solution(mutant)
-          mutant['fitness'] = self.evaluate(mutant)
+          mutant.evaluate()
           return mutant
         
         return offspring
@@ -86,11 +85,13 @@ class GeneticAlgorithm(Algorithm):
         """
         
         new_population = []
-        for idx in range(0, len(population), 2):
+        for idx in range(0, len(population)-2, 2):
             parent1, parent2 = population[idx], population[idx + 1]
-            offspring = self.crossover_method.run(parent1, parent2)
-            offspring = self.mutate(offspring)
-            new_population.append(offspring)
+            offspring1, offspring2 = self.crossover_method.run(parent1, parent2)
+            offspring1 = self.mutate(offspring1)
+            offspring2 = self.mutate(offspring2) 
+            new_population.append(offspring1)
+            new_population.append(offspring2)
 
         return new_population
     
@@ -127,10 +128,10 @@ class GeneticAlgorithm(Algorithm):
             new_population = self.reproduce(new_population)
             new_fittest = self.fittest_chromosome(new_population)
 			
-            if new_fittest['fitness'] > fittest['fitness']:
+            if new_fittest.evaluation > fittest.evaluation:
                 fittest = new_fittest
                 iteration_no_imp = 0
 
         elapsed = perf_counter() - start
-
+        fittest.time = elapsed
         return fittest

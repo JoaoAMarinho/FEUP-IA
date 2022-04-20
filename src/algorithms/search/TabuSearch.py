@@ -24,20 +24,21 @@ class TabuSearch(Algorithm):
             iteration_no_imp += 1
 
             neighbours = self.neighbour_solutions(solution)
-            new_best_solution = self.get_best_solution(neighbours)
+            new_solution = self.get_best_solution(neighbours)
 
-            key = hash(new_best_solution)
-            if key not in self.tabu_tenure:
-              if solution.evaluation > best_solution.evaluation:
-                solution = new_best_solution
+            key = hash(new_solution)
+            if key not in self.tabu_memory:
+              if new_solution.evaluation > best_solution:
+                solution = new_solution
+                best_solution = new_solution.evaluation
                 self.tabu_memory[key] = solution
-                self.tabu_memory[key]['tenure'] = self.tabu_tenure
+                self.tabu_memory[key].tenure = self.tabu_tenure
             else:
-              tenure = self.tabu_memory[key]['tenure']
+              tenure = self.tabu_memory[key].tenure
               if tenure == 0: self.tabu_memory.pop(key)
-              else: self.tabu_memory[key]['tenure'] = tenure - 1
+              else: self.tabu_memory[key].tenure = tenure - 1
 
 
         elapsed = perf_counter() - start
-        
+        solution.time = elapsed
         return solution

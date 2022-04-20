@@ -29,7 +29,6 @@ class Row:
         if server.size > self.max_available_slots:
             return -1
 
-        # 1st fit
         for slot in range(0, n_slots-server.size+1):
             if any(val != -1 for val in self.slots[slot:slot+server.size]):
                 continue

@@ -28,8 +28,7 @@ class Solution:
         return sol.rows == self.rows and sol.servers == self.servers and sol.pools == self.pools
 
     def __hash__(self):
-        pools = [i for i in range(0, self.pools)]
-        return reduce(lambda s1, s2: s1*s2, self.servers) + reduce(lambda p1, p2: p1*p2, pools)
+        return reduce(lambda hash, s2: hash * abs(s2.id + s2.row + s2.pool + s2.slot), self.servers, 0)
 
     def __lt(self, sol):
         if not isinstance(sol, self.__class__): return False

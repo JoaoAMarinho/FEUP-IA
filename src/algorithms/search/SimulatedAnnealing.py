@@ -37,5 +37,5 @@ class SimulatedAnnealing(Algorithm):
                 iteration_no_imp = 0
     
         elapsed = perf_counter() - start
-        
+        solution.time = elapsed
         return solution
