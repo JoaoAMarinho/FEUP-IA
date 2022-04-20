@@ -9,7 +9,7 @@ class DataCenter:
         self.rows = []
         self.servers = []
         self.parse_file(filename)
-        self.initial_solution()
+        self.solution = self.initial_solution()
 
     def parse_file(self, filename):
         file = open(f'src/inputs/{filename}', 'r')
@@ -31,9 +31,6 @@ class DataCenter:
         file.close()
 
     def initial_solution(self):
-        allocated = []
-        not_allocated = [server.id for server in self.servers]
-
         for server in self.servers:
             for row_idx, row in enumerate(self.rows):
                 slot = row.allocate_server(server)
@@ -43,8 +40,6 @@ class DataCenter:
 
                 server.set_position(slot, row_idx)
                 server.set_pool(randint(0, self.pools-1))
-                allocated.append(server.id)
-                not_allocated.remove(server.id)
                 break
         
         return Solution(self.rows, self.servers, self.pools)

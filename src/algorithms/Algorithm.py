@@ -94,7 +94,8 @@ class Algorithm(ABC):
         new_solution = deepcopy(solution)
         servers, rows = new_solution.servers, new_solution.rows
 
-        allocated = deallocated= []
+        allocated = []
+        deallocated = []
 
         for server in servers:
             if server.pool != -1:
@@ -163,9 +164,6 @@ class Algorithm(ABC):
         selected_operator = randint(0, len(operators) - 1)
         new_solution = operators[selected_operator](solution)
         new_solution.evaluate()
-        if(new_solution.evaluation == 2 or new_solution.evaluation == 3 or new_solution.evaluation == 1 or new_solution.evaluation == 4): 
-            print("error ", selected_operator)
-            print(new_solution.rows)
         return new_solution
     
     def neighbour_solutions(self, solution):

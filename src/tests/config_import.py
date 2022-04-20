@@ -8,3 +8,4 @@ from algorithms.search.HillClimbing import HillClimbing
 from algorithms.search.SimulatedAnnealing import SimulatedAnnealing
 from algorithms.search.TabuSearch import TabuSearch
 from algorithms.genetic.GeneticAlgorithm import GeneticAlgorithm
+from algorithms.Algorithm import Algorithm
