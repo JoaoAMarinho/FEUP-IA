@@ -5,7 +5,7 @@ class TestAlgorithms(unittest.TestCase):
     def setUpClass(cls):
         cls.data_center = DataCenter('input_xl.txt')
         cls.solution = cls.data_center.solution
-        cls.i = 4
+        cls.i = 5
         print(cls.solution, "Eval Initial ",cls.solution.evaluation)
 
 
