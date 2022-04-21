@@ -1,7 +1,5 @@
 
-from time import perf_counter
-
-from algorithms.Algorithm import Algorithm
+from algorithms.Algorithm import *
 
 
 class TabuSearch(Algorithm):
@@ -10,7 +8,7 @@ class TabuSearch(Algorithm):
         self.tabu_tenure = tabu_tenure
         self.tabu_memory = {}  
 
-    def execute(self):
+    def execute(self, file):
         start = perf_counter()
 
         iteration = 0
@@ -18,6 +16,9 @@ class TabuSearch(Algorithm):
 
         solution = self.initial_solution
         best_solution = solution.evaluation
+
+        self.open_file(file)
+        self.write_to_file(file, solution)
         
         while not self.stop(iteration, iteration_no_imp):
             iteration += 1
@@ -29,6 +30,7 @@ class TabuSearch(Algorithm):
             key = hash(new_solution)
             if key not in self.tabu_memory:
               if new_solution.evaluation > best_solution:
+                self.write_to_file(file, new_solution)
                 solution = new_solution
                 best_solution = new_solution.evaluation
                 self.tabu_memory[key] = solution
@@ -41,4 +43,5 @@ class TabuSearch(Algorithm):
 
         elapsed = perf_counter() - start
         solution.time = elapsed
+        self.close_file(file)
         return solution

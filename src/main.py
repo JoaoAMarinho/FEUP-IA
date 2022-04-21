@@ -1,4 +1,3 @@
-from model.DataCenter import DataCenter
 from gui import display
 
 def main():

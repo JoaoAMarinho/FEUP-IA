@@ -1,7 +1,8 @@
 from abc import abstractmethod, ABC
 from random import randint, choice
 from copy import deepcopy
-
+from time import perf_counter
+import json
 
 class Algorithm(ABC):
     def __init__(self, initial_solution, max_iterations=10000, max_iterations_no_imp=1000):
@@ -187,3 +188,19 @@ class Algorithm(ABC):
 
     def get_best_solution(self, solution):
         return max(solution, key= lambda sol: sol.evaluation)
+
+    def open_file(self, file):
+        with open(file, 'w') as outfile:
+            outfile.write('{"data": [\n')
+
+    def write_to_file(self, file,solution):
+        data = {'rows': solution.rows.__str__(),
+                'evaluation': solution.evaluation}
+
+        with open(file, 'a') as outfile:
+            outfile.write(json.dumps(data)+',\n')
+            outfile.close()
+
+    def close_file(self, file):
+        with open(file, 'a') as outfile:
+            outfile.write(']}')
