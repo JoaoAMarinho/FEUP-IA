@@ -12,7 +12,7 @@ class SimulatedAnnealing(Algorithm):
     def schedule_temperature(self, t):
         return t * self.temp_decrease_factor
 
-    def execute(self, file):
+    def execute(self, callback, file = 'simulated_annealing_5.json'):
         start = perf_counter()
         iteration = 0
         iteration_no_imp = 0
@@ -46,4 +46,6 @@ class SimulatedAnnealing(Algorithm):
         elapsed = perf_counter() - start
         self.close_file(file)
         solution.time = elapsed
+
+        callback(solution)
         return solution

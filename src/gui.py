@@ -5,7 +5,7 @@ from model.DataCenter import DataCenter
 from algorithms.search.HillClimbing import HillClimbing
 from algorithms.search.SimulatedAnnealing import SimulatedAnnealing
 from algorithms.search.TabuSearch import TabuSearch
-from algorithms.genetic import GeneticAlgorithm
+from algorithms.genetic.GeneticAlgorithm import GeneticAlgorithm
 from threading import Thread
 
 
@@ -225,6 +225,8 @@ class SolutionMenu(Menu):
         self.offset = pygame.math.Vector2(0,0)
         self.font = pygame.font.SysFont('gillsansnegrito', 80)
 
+        self.mainMenuButton = pygame.Rect(1400 , 20  - self.offset.y, 210, 70)
+
         thread = Thread(target=self.algorithm.execute, args=[self.finish_execute])
         thread.start()
 
@@ -235,7 +237,8 @@ class SolutionMenu(Menu):
     
     def set_max_offset(self):
         rows = self.solution.rows
-        max_offset = pygame.math.Vector2(250 + len(rows[0].slots) * 60, 250 + len(rows) * 60)
+        max_offset_y = max(len(rows), self.solution.pools)
+        max_offset = pygame.math.Vector2(250 + len(rows[0].slots) * 60, 250 + max_offset_y* 60)
         self.max_offset = max_offset - pygame.math.Vector2(1800, 900)
         
     def draw(self):
@@ -245,10 +248,21 @@ class SolutionMenu(Menu):
             return
 
         self.input()
+        
+        font = pygame.font.SysFont('gillsansnegrito', 40)
+
+        pygame.draw.rect(self.display_surface, BLUE, self.mainMenuButton, 0, 10)
+        mainMenuText = font.render('Main Menu', True, WHITE)
+        self.display_surface.blit(mainMenuText,(1400, 25-self.offset.y))
 
         title = self.font.render('Solution', True, WHITE)
         self.display_surface.blit(title,(20,40-self.offset.y))
         rows, servers = self.solution.rows, self.solution.servers
+
+        evaluation = font.render(f'Minimum guaranteed capacity is {self.solution.evaluation}',True, WHITE)
+        self.display_surface.blit(evaluation,(120,120-self.offset.y))
+
+
         
         for row_idx, row in enumerate(rows):
             for slot_idx, slot in enumerate(row.slots):
@@ -259,11 +273,23 @@ class SolutionMenu(Menu):
                     increment = [ servers[slot].pool * 47 + 79 ] * 3
                     color = [(BASE_COLOR[i] + increment[i]) % 256 for i in range(3) ]
                 pygame.draw.rect(self.display_surface, color, rect, 0, 10)
+        
+        for pool in range (self.solution.pools):
+            increment = [pool * 47 + 79 ] * 3
+            color = [(BASE_COLOR[i] + increment[i]) % 256 for i in range(3) ]
+
+            rect = pygame.Rect(100 - self.offset.x, 200 + (pool*60) - self.offset.y, 50, 50)
+            pygame.draw.rect(self.display_surface, color, rect, 0, 10)
+
+            pool_txt = font.render(f'P {pool}', True, WHITE)
+            self.display_surface.blit(pool_txt,(15 - self.offset.x,200 + (pool*60)-self.offset.y))
 
 
     def click_events(self, event):
-        return self
-    
+        if self.mainMenuButton.collidepoint(event.pos):
+            return MainMenu()
+        return self   
+
     def key_events(self, event):
         pass
     

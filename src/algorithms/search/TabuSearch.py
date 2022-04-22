@@ -8,7 +8,7 @@ class TabuSearch(Algorithm):
         self.tabu_tenure = tabu_tenure
         self.tabu_memory = {}  
 
-    def execute(self, file):
+    def execute(self, callback, file = 'tabu_search_5.json'):
         start = perf_counter()
 
         iteration = 0
@@ -44,4 +44,6 @@ class TabuSearch(Algorithm):
         elapsed = perf_counter() - start
         solution.time = elapsed
         self.close_file(file)
+
+        callback(solution)
         return solution

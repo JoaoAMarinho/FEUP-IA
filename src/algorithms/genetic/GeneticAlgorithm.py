@@ -98,7 +98,7 @@ class GeneticAlgorithm(Algorithm):
 
         return new_population
 
-    def execute(self, file):
+    def execute(self, callback, file = 'genetic_algorithm_5.json'):
 
         """
         Runs the genetic algorithm
@@ -144,4 +144,6 @@ class GeneticAlgorithm(Algorithm):
         elapsed = perf_counter() - start
         fittest.time = elapsed
         self.close_file(file)
+
+        callback(fittest)
         return fittest
