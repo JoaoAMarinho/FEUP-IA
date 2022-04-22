@@ -125,6 +125,7 @@ class GeneticAlgorithm(Algorithm):
         fittest = self.fittest_chromosome(population)
 
         self.open_file(file)
+        fittest.time = perf_counter() - start
         self.write_to_file(file, fittest)
 
         while not self.stop(iteration, iteration_no_imp):
@@ -136,6 +137,7 @@ class GeneticAlgorithm(Algorithm):
             new_fittest = self.fittest_chromosome(new_population)
 
             if new_fittest.evaluation > fittest.evaluation:
+                   new_fittest.time = perf_counter() - start
                    self.write_to_file(file,new_fittest)
 
                    fittest = new_fittest

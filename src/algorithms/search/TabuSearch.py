@@ -3,7 +3,7 @@ from algorithms.Algorithm import *
 
 
 class TabuSearch(Algorithm):
-    def __init__(self, initial_solution, tabu_tenure=3, max_iterations=10000, max_iterations_no_imp=1000):
+    def __init__(self, initial_solution, tabu_tenure=40, max_iterations=10000, max_iterations_no_imp=1000):
         super().__init__(initial_solution, max_iterations, max_iterations_no_imp)
         self.tabu_tenure = tabu_tenure
         self.tabu_memory = {}  
@@ -18,6 +18,7 @@ class TabuSearch(Algorithm):
         best_solution = solution.evaluation
 
         self.open_file(file)
+        solution.time = perf_counter() - start
         self.write_to_file(file, solution)
         
         while not self.stop(iteration, iteration_no_imp):
@@ -30,6 +31,7 @@ class TabuSearch(Algorithm):
             key = hash(new_solution)
             if key not in self.tabu_memory:
               if new_solution.evaluation > best_solution:
+                new_solution.time = perf_counter() - start
                 self.write_to_file(file, new_solution)
                 solution = new_solution
                 best_solution = new_solution.evaluation

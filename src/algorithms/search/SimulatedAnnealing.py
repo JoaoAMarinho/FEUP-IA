@@ -22,7 +22,7 @@ class SimulatedAnnealing(Algorithm):
         temperature = self.initial_temp
 
         self.open_file(file)
-
+        solution.time = perf_counter() - start
         self.write_to_file(file, solution)
 
         while not self.stop(iteration, iteration_no_imp):
@@ -38,6 +38,7 @@ class SimulatedAnnealing(Algorithm):
             delta_evaluation = neighbour_evaluation - evaluation
 
             if delta_evaluation > 0 or random.uniform(0.0, 1.0) <= exp(delta_evaluation/temperature):
+                neighbour.time = perf_counter() - start
                 self.write_to_file(file,neighbour)
                 solution = neighbour
                 evaluation = neighbour_evaluation

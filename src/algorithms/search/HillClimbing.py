@@ -13,6 +13,7 @@ class HillClimbing(Algorithm):
         evaluation = solution.evaluation
 
         self.open_file(file)
+        solution.time = perf_counter() - start
         self.write_to_file(file, solution)
 
         
@@ -24,6 +25,7 @@ class HillClimbing(Algorithm):
             neighbour_evaluation = neighbour.evaluation
 
             if (neighbour_evaluation > evaluation): 
+                neighbour.time = perf_counter() - start
                 self.write_to_file(file, neighbour)
                 solution = neighbour
                 evaluation = neighbour_evaluation

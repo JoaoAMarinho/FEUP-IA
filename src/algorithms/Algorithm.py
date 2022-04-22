@@ -195,7 +195,8 @@ class Algorithm(ABC):
 
     def write_to_file(self, file,solution):
         data = {'rows': solution.rows.__str__(),
-                'evaluation': solution.evaluation}
+                'evaluation': solution.evaluation,
+                'time': solution.time}
 
         with open(file, 'a') as outfile:
             outfile.write(json.dumps(data)+',\n')
