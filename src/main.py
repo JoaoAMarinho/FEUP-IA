@@ -1,7 +1,7 @@
-from gui import display
+from gui import Gui
 
 def main():
-    display()
+    Gui().loop()
 
 
 if __name__ == '__main__':
