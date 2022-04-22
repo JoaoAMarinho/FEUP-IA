@@ -6,7 +6,8 @@ from algorithms.search.HillClimbing import HillClimbing
 from algorithms.search.SimulatedAnnealing import SimulatedAnnealing
 from algorithms.search.TabuSearch import TabuSearch
 from algorithms.genetic import GeneticAlgorithm
-from pygame.functions import *
+from threading import Thread
+
 
 WHITE = '#FFFFFF'
 DARK_BLUE = '#306A8A'
@@ -20,6 +21,7 @@ PINK = '#FFC0CB'
 ORANGE = '#FFA500'
 PURPLE = '#6A0DAD'
 BLACK = '#000000'
+BASE_COLOR = (48, 106, 138)
 
 SCREEN = pygame.display.set_mode((1800, 900))
 class Gui():
@@ -218,30 +220,44 @@ class SolutionMenu(Menu):
     def __init__(self, file, algorithm):
         super().__init__()
         self.algorithm = algorithm
-        self.pools = [YELLOW, GREEN, BLUE, PINK, ORANGE, PURPLE]
         self.loading = True
         
-        SCREEN.fill(BG_COLOR)
-        font = pygame.font.SysFont('gillsansnegrito', 80)
-        title = font.render('Calculating best solution', True, WHITE)
-        self.display_surface.blit(title,(700,400))
-        pygame.display.flip()
+        self.offset = pygame.math.Vector2(0,0)
+        self.font = pygame.font.SysFont('gillsansnegrito', 80)
+
+        thread = Thread(target=self.algorithm.execute, args=[self.finish_execute])
+        thread.start()
+
+    def finish_execute(self, solution):
+        self.solution = solution
+        self.loading = False
+        self.set_max_offset()
+    
+    def set_max_offset(self):
+        rows = self.solution.rows
+        max_offset = pygame.math.Vector2(250 + len(rows[0].slots) * 60, 250 + len(rows) * 60)
+        self.max_offset = max_offset - pygame.math.Vector2(1800, 900)
+        
     def draw(self):
         if self.loading:
-            self.solution = self.algorithm.execute()
-            self.loading = False
+            title = self.font.render('Calculating best solution', True, WHITE)
+            self.display_surface.blit(title,(700,400))
+            return
 
-        font = pygame.font.SysFont('gillsansnegrito', 80)
-        title = font.render('Solution', True, WHITE)
-        self.display_surface.blit(title,(20,40))
-        rows = self.solution.rows
+        self.input()
 
+        title = self.font.render('Solution', True, WHITE)
+        self.display_surface.blit(title,(20,40-self.offset.y))
+        rows, servers = self.solution.rows, self.solution.servers
+        
         for row_idx, row in enumerate(rows):
             for slot_idx, slot in enumerate(row.slots):
-                rect = pygame.Rect(200 + (slot_idx*60), 300 + (row_idx*60), 50, 50)
+                rect = pygame.Rect(200 + (slot_idx*60) - self.offset.x, 200 + (row_idx*60) - self.offset.y, 50, 50)
                 if slot == -2: color = RED
                 elif slot == -1: color = BLACK
-                else: color = self.pools[self.solution.servers[slot].pool % len(self.pools)]
+                else:
+                    increment = [ servers[slot].pool * 47 + 79 ] * 3
+                    color = [(BASE_COLOR[i] + increment[i]) % 256 for i in range(3) ]
                 pygame.draw.rect(self.display_surface, color, rect, 0, 10)
 
 
@@ -249,15 +265,21 @@ class SolutionMenu(Menu):
         return self
     
     def key_events(self, event):
-        if event.key == pygame.K_UP:
-            SCREEN.scroll(0, 2)
-        elif event.key == pygame.K_DOWN:
-            SCREEN.scroll(0, -2)
-        elif event.key == pygame.K_LEFT:
-            SCREEN.scroll(2, 0)
-        elif event.key == pygame.K_RIGHT:
-            SCREEN.scroll(-2, 0)
-        pygame.display.update()
+        pass
+    
+    def input(self):
+        keys = pygame.key.get_pressed()
+
+        if keys[pygame.K_LEFT]:
+            self.offset.x = new_offset if (new_offset := self.offset.x - 20) >= 0 else self.offset.x
+        elif keys[pygame.K_RIGHT]:
+            self.offset.x = new_offset if (new_offset := self.offset.x + 20) <= self.max_offset.x else self.offset.x
+        if keys[pygame.K_UP]:
+            self.offset.y = new_offset if (new_offset := self.offset.y - 20) >= 0 else self.offset.y
+        elif keys[pygame.K_DOWN]:
+            self.offset.y = new_offset if (new_offset := self.offset.y + 20) <= self.max_offset.y else self.offset.y
+
+
 
     def hover_events(self, event):
         pass
