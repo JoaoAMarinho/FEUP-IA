@@ -5,7 +5,7 @@ class HillClimbing(Algorithm):
     def __init__(self, initial_solution, max_iterations=10000, max_iterations_no_imp=1000):
         super().__init__(initial_solution, max_iterations, max_iterations_no_imp)
 
-    def execute(self,file):
+    def execute(self,file = 'hill_climbing_5.json'):
         start = perf_counter()
         iteration = 0
         iteration_no_imp = 0

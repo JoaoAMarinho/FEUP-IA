@@ -204,3 +204,6 @@ class Algorithm(ABC):
     def close_file(self, file):
         with open(file, 'a') as outfile:
             outfile.write(']}')
+
+    def set_initial_solution(self, initial_solution):
+        self.initial_solution = initial_solution

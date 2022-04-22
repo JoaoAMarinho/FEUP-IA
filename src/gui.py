@@ -1,71 +1,266 @@
-from tkinter import *
-from turtle import onclick
-from PIL import ImageTk, Image
+import sys
+import pygame
+from pygame.locals import *
 from model.DataCenter import DataCenter
-from algorithms.search import HillClimbing
+from algorithms.search.HillClimbing import HillClimbing
+from algorithms.search.SimulatedAnnealing import SimulatedAnnealing
+from algorithms.search.TabuSearch import TabuSearch
+from algorithms.genetic import GeneticAlgorithm
+from pygame.functions import *
 
-WIDTH = 910
-bg_color = '#1E4154'
-fontc = 'Calibri'
-root = Tk()
-window = Frame(root)
-window.pack()
+WHITE = '#FFFFFF'
+DARK_BLUE = '#306A8A'
+GREY = '#4A5D68'
+BLUE = '#5A9BC0'
+BG_COLOR = '#1E4154'
+RED = '#FF0000'
+YELLOW = '#FFFF00'
+GREEN = '#00FF00'
+PINK = '#FFC0CB'
+ORANGE = '#FFA500'
+PURPLE = '#6A0DAD'
+BLACK = '#000000'
 
-def start(window):
-    window.destroy()
-    window = Frame(root)
-    window.config(width=900, height=500)
-    window.configure(bg=bg_color)
-    window.pack()
+SCREEN = pygame.display.set_mode((1800, 900))
+class Gui():
+    def __init__(self):
+        pygame.init()
+        pygame.display.set_caption("Optimization problem")
+
+        self.width, self.height = 1800, 900
+        self.screen = SCREEN
+        self.clock = pygame.time.Clock()
+        
+        self.menu = MainMenu()
+
+    def check_events(self):
+        new_menu = self.menu
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit(0)
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                new_menu = self.menu.click_events(event)
+                continue
+            if event.type == pygame.KEYDOWN:
+                self.menu.key_events(event)
+                continue
+            if event.type == pygame.MOUSEMOTION:
+                self.menu.hover_events(event)
+
+        self.menu = new_menu 
 
 
+    def loop(self):
+        while True:
+            self.screen.fill(BG_COLOR)
+            self.check_events()
+            self.menu.draw()
+            
+            pygame.display.flip()
+            self.clock.tick(60)
 
-    data_center = DataCenter(inputfile.get())
-    x = 10
-    y = 30
-    for row in data_center.rows:
-       Label(window, fg='white', background='white', width=len(row.slots)*10).place(x=x, y=y)
-       y += 40
-# solution = HillClimbing(data_center.initial_solution).execute()
+class Menu():
+    def __init__(self):
+        self.display_surface = pygame.display.get_surface()
 
+    def draw(self):
+        pass
 
+    def click_events(self, event):
+        pass
     
+    def key_events(self, event):
+        pass
+
+    def hover_events(self, event):
+        pass
+
+class MainMenu(Menu):
+    def __init__(self):
+        super().__init__()
+        self.user_text = 'input.txt'
+        self.input_rect = pygame.Rect(1250, 700, 140, 55)
+        self.start_circle = pygame.Rect(800,450, 280, 100)
+        self.input_circle = pygame.Rect(1250,700, 120, 80)
+        self.info_circle = pygame.Rect(1200,250, 180, 80)
+    
+    def draw(self):
+        font = pygame.font.SysFont('gillsansnegrito', 80)
+
+        pygame.draw.circle(self.display_surface, DARK_BLUE, (900,500), 200)
+        pygame.draw.circle(self.display_surface, GREY, (1400,700), 160)
+        pygame.draw.circle(self.display_surface, BLUE, (1300,300), 110)
+
+        title_1 = font.render('OPTIMIZE A DATA', True, WHITE)
+        title_2 = font.render('CENTER', True, WHITE)
+        self.display_surface.blit(title_1,(20,40))
+        self.display_surface.blit(title_2,(20,110))
+
+        start = font.render('START', True, WHITE)
+        self.display_surface.blit(start, (800,450))
+
+        font = pygame.font.SysFont('gillsans', 40)
+        info_1 = font.render('Additional', True, WHITE)
+        info_2 = font.render('info', True, WHITE)
+        self.display_surface.blit(info_1, (1220,250))
+        self.display_surface.blit(info_2, (1270,280))
+
+        pygame.draw.rect(self.display_surface, GREY, self.input_rect, 1)
+        text_surface = font.render(self.user_text, True, WHITE)
+        self.display_surface.blit(text_surface, (self.input_rect.x+5, self.input_rect.y+5))
+        self.input_rect.w = max(100, text_surface.get_width()+10)
+
+    def click_events(self, event):
+        if self.start_circle.collidepoint(event.pos):
+            return AlgorithmMenu(self.user_text)
+        elif self.info_circle.collidepoint(event.pos):
+            return InstructionsMenu()
+        return self
+
+    def key_events(self, event):
+        if event.key == pygame.K_BACKSPACE:
+            self.user_text = self.user_text[:-1]
+        elif len(self.user_text) <= 15:
+            self.user_text += event.unicode
+
+    def hover_events(self, event):
+        pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_ARROW)
+
+        if self.start_circle.collidepoint(event.pos):
+            pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
+        elif self.input_circle.collidepoint(event.pos):
+            pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_IBEAM)
+        elif self.info_circle.collidepoint(event.pos):
+            pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
+
+class AlgorithmMenu(Menu):
+    def __init__(self, file):
+        super().__init__()
+        self.file = file
+        self.hill_climbing_rect = pygame.Rect(225, 300, 700, 130)
+        self.simulated_annealing_rect = pygame.Rect(225, 500, 700, 130)
+        self.genetic_rect = pygame.Rect(975, 300, 700, 130)
+        self.tabu_search_rect = pygame.Rect(975, 500, 700, 130)
+        self.rect_collision = [ False for _ in range(4) ]
+        self.data_center = DataCenter(file)
+    
+    def draw(self):
+        font = pygame.font.SysFont('gillsansnegrito', 80)
+        title = font.render('Algorithms', True, WHITE)
+        self.display_surface.blit(title,(20,40))
+
+        pygame.draw.rect(self.display_surface, GREY, self.hill_climbing_rect, 0 if self.rect_collision[0] else 1, 10)
+        pygame.draw.rect(self.display_surface, GREY, self.simulated_annealing_rect, 0 if self.rect_collision[1] else 1, 10)
+        pygame.draw.rect(self.display_surface, GREY, self.genetic_rect, 0 if self.rect_collision[2] else 1, 10)
+        pygame.draw.rect(self.display_surface, GREY, self.tabu_search_rect, 0 if self.rect_collision[3] else 1, 10)
+
+        algorithms = [('Hill climbing', 575, 320), ('Simulated Annealing', 575, 520), ('Genetic', 1325, 320), ('Tabu Search', 1325, 520)]
+        font = pygame.font.SysFont('gillsansnegrito', 70)
+
+        for algorithm in algorithms:
+            alg_text, x, y = algorithm
+
+            text = font.render(alg_text, True, WHITE)
+            x -= text.get_size()[0] // 2
+            self.display_surface.blit(text, (x,y))
+
+    def click_events(self, event):
+        if self.hill_climbing_rect.collidepoint(event.pos):
+            return SolutionMenu(self.file, HillClimbing(self.data_center.solution))
+        elif self.simulated_annealing_rect.collidepoint(event.pos):
+            return SolutionMenu(self.file, SimulatedAnnealing(self.data_center.solution))
+        elif self.genetic_rect.collidepoint(event.pos):
+            return SolutionMenu(self.file, GeneticAlgorithm(self.data_center.solution))
+        elif self.tabu_search_rect.collidepoint(event.pos):
+            return SolutionMenu(self.file, TabuSearch(self.data_center.solution))
+
+    def key_events(self, event):
+        pass
+
+    def hover_events(self, event):
+        self.rect_collision = [ False for _ in range(4) ]
+        pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_ARROW)
+
+        if self.hill_climbing_rect.collidepoint(event.pos):
+            pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
+            self.rect_collision[0] = True
+
+        elif self.simulated_annealing_rect.collidepoint(event.pos):
+            self.rect_collision[1] = True
+            pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
+
+        elif self.genetic_rect.collidepoint(event.pos):
+            self.rect_collision[2] = True
+            pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
+
+        elif self.tabu_search_rect.collidepoint(event.pos):
+            self.rect_collision[3] = True
+            pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)       
+
+class InstructionsMenu(Menu):
+    def __init__(self):
+        super().__init__()
+    
+    def draw(self):
+        pass
+
+    def click_events(self, event):
+        pass
+    
+    def key_events(self, event):
+        pass
+
+    def hover_events(self, event):
+        pass
+
+class SolutionMenu(Menu):
+    def __init__(self, file, algorithm):
+        super().__init__()
+        self.algorithm = algorithm
+        self.pools = [YELLOW, GREEN, BLUE, PINK, ORANGE, PURPLE]
+        self.loading = True
+        
+        SCREEN.fill(BG_COLOR)
+        font = pygame.font.SysFont('gillsansnegrito', 80)
+        title = font.render('Calculating best solution', True, WHITE)
+        self.display_surface.blit(title,(700,400))
+        pygame.display.flip()
+    def draw(self):
+        if self.loading:
+            self.solution = self.algorithm.execute()
+            self.loading = False
+
+        font = pygame.font.SysFont('gillsansnegrito', 80)
+        title = font.render('Solution', True, WHITE)
+        self.display_surface.blit(title,(20,40))
+        rows = self.solution.rows
+
+        for row_idx, row in enumerate(rows):
+            for slot_idx, slot in enumerate(row.slots):
+                rect = pygame.Rect(200 + (slot_idx*60), 300 + (row_idx*60), 50, 50)
+                if slot == -2: color = RED
+                elif slot == -1: color = BLACK
+                else: color = self.pools[self.solution.servers[slot].pool % len(self.pools)]
+                pygame.draw.rect(self.display_surface, color, rect, 0, 10)
 
 
+    def click_events(self, event):
+        return self
+    
+    def key_events(self, event):
+        if event.key == pygame.K_UP:
+            SCREEN.scroll(0, 2)
+        elif event.key == pygame.K_DOWN:
+            SCREEN.scroll(0, -2)
+        elif event.key == pygame.K_LEFT:
+            SCREEN.scroll(2, 0)
+        elif event.key == pygame.K_RIGHT:
+            SCREEN.scroll(-2, 0)
+        pygame.display.update()
+
+    def hover_events(self, event):
+        pass
 
 
-
-
-# GUI settings
-
-root.geometry('900x500')
-window.config(width=900, height=500)
-
-window.configure(bg=bg_color)
-root.resizable(0,0)
-root.title('Optimize a Data Center')
-
-
-Label(window,text='OPTIMIZE A DATA \nCENTER',font=(fontc,45,'bold'),justify=LEFT, fg='white',background=bg_color).place(x=80, y=30)
-Label(window,text='Inteligência Artificial 21/22',font=(fontc,10,'italic'),fg='white',background=bg_color).place(x=740, y=10)
-
-small_circle = ImageTk.PhotoImage(Image.open('./assets/small_circle.png'))
-medium_circle = ImageTk.PhotoImage(Image.open('./assets/medium_circle.png'))
-big_circle = ImageTk.PhotoImage(Image.open('./assets/big_circle.png'))
-
-Label(window, image=small_circle, background=bg_color, width=300).place(x=600,y=100)
-Button(window, text='Additional\ninfo', font=(fontc,18), command= print('oi'), fg='white',background='#5A9BC0', bd=0, cursor='hand2').place(x=690,y=140)
-
-Label(window, image=big_circle, background=bg_color, width=300).place(x=300,y=130)
-Button(window, text='START', font=(fontc,35,'bold'), fg='white',background='#306A8A', bd=0, cursor='hand2', command=lambda: start(window)).place(x=370,y=200)
-
-inputfile = StringVar(window, value='input.txt')
-Label(window, image=medium_circle, background=bg_color, width=300).place(x=570,y=300)
-Entry(window, textvariable = inputfile, fg='white',width=9, font=(fontc,23,'italic'), background='#4A5D68').place(x=670,y=370)
-
-
-
-
-def display():
-    window.mainloop()
-
+Gui().loop()
