@@ -169,13 +169,13 @@ class AlgorithmMenu(Menu):
 
     def click_events(self, event):
         if self.hill_climbing_rect.collidepoint(event.pos):
-            return SolutionMenu(self.file, HillClimbing(self.data_center.solution))
+            return SolutionMenu(HillClimbing(self.data_center.solution))
         elif self.simulated_annealing_rect.collidepoint(event.pos):
-            return SolutionMenu(self.file, SimulatedAnnealing(self.data_center.solution))
+            return SolutionMenu(SimulatedAnnealing(self.data_center.solution))
         elif self.genetic_rect.collidepoint(event.pos):
-            return SolutionMenu(self.file, GeneticAlgorithm(self.data_center.solution))
+            return SolutionMenu(GeneticAlgorithm(self.data_center.solution))
         elif self.tabu_search_rect.collidepoint(event.pos):
-            return SolutionMenu(self.file, TabuSearch(self.data_center.solution))
+            return SolutionMenu(TabuSearch(self.data_center.solution))
 
     def key_events(self, event):
         pass
@@ -217,7 +217,7 @@ class InstructionsMenu(Menu):
         pass
 
 class SolutionMenu(Menu):
-    def __init__(self, file, algorithm):
+    def __init__(self, algorithm):
         super().__init__()
         self.algorithm = algorithm
         self.loading = True
@@ -250,8 +250,10 @@ class SolutionMenu(Menu):
         self.input()
         
         font = pygame.font.SysFont('gillsansnegrito', 40)
+        small_font = pygame.font.SysFont('gillsansnegrito', 25)
 
-        pygame.draw.rect(self.display_surface, BLUE, self.mainMenuButton, 0, 10)
+        mainMenuButton = pygame.Rect(1400 , 20  - self.offset.y, 210, 70)
+        pygame.draw.rect(self.display_surface, BLUE, mainMenuButton, 0, 10)
         mainMenuText = font.render('Main Menu', True, WHITE)
         self.display_surface.blit(mainMenuText,(1400, 25-self.offset.y))
 
@@ -273,6 +275,10 @@ class SolutionMenu(Menu):
                     increment = [ servers[slot].pool * 47 + 79 ] * 3
                     color = [(BASE_COLOR[i] + increment[i]) % 256 for i in range(3) ]
                 pygame.draw.rect(self.display_surface, color, rect, 0, 10)
+
+                if slot >= 0: # Draw server text
+                    server_text = small_font.render(f'S {slot}', True, WHITE)
+                    self.display_surface.blit(server_text, (rect.left + 5, rect.bottom - server_text.get_height()))
         
         for pool in range (self.solution.pools):
             increment = [pool * 47 + 79 ] * 3
@@ -284,15 +290,6 @@ class SolutionMenu(Menu):
             pool_txt = font.render(f'P {pool}', True, WHITE)
             self.display_surface.blit(pool_txt,(15 - self.offset.x,200 + (pool*60)-self.offset.y))
 
-
-    def click_events(self, event):
-        if self.mainMenuButton.collidepoint(event.pos):
-            return MainMenu()
-        return self   
-
-    def key_events(self, event):
-        pass
-    
     def input(self):
         keys = pygame.key.get_pressed()
 
@@ -305,7 +302,13 @@ class SolutionMenu(Menu):
         elif keys[pygame.K_DOWN]:
             self.offset.y = new_offset if (new_offset := self.offset.y + 20) <= self.max_offset.y else self.offset.y
 
+    def click_events(self, event):
+        if self.mainMenuButton.collidepoint(event.pos):
+            return MainMenu()
+        return self   
 
+    def key_events(self, event):
+        pass
 
     def hover_events(self, event):
         pass
