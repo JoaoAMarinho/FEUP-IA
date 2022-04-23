@@ -1,470 +1,3280 @@
-{"data": [
-{"evaluation": 72, "time": 0.001710000040475279, "iteration": 0, "temperature": 1000, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.022639600036200136, "iteration": 1, "temperature": 200.0, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.03885410004295409, "iteration": 2, "temperature": 40.0, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.05980300001101568, "iteration": 3, "temperature": 8.0, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.07429530000081286, "iteration": 4, "temperature": 1.6, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.09617110004182905, "iteration": 5, "temperature": 0.32000000000000006, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.11054270004387945, "iteration": 6, "temperature": 0.06400000000000002, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.1246470000478439, "iteration": 7, "temperature": 0.012800000000000004, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.13908260001335293, "iteration": 8, "temperature": 0.002560000000000001, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.1532227999996394, "iteration": 9, "temperature": 0.0005120000000000002, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.16760350001277402, "iteration": 10, "temperature": 0.00010240000000000005, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.1818535000202246, "iteration": 11, "temperature": 2.048000000000001e-05, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.2005743000190705, "iteration": 12, "temperature": 4.096000000000002e-06, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.21880989999044687, "iteration": 13, "temperature": 8.192000000000005e-07, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.23682900000130758, "iteration": 14, "temperature": 1.638400000000001e-07, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.25409360002959147, "iteration": 15, "temperature": 3.276800000000002e-08, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.2664208000060171, "iteration": 16, "temperature": 6.553600000000004e-09, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.2818521000444889, "iteration": 17, "temperature": 1.310720000000001e-09, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.30052580003393814, "iteration": 18, "temperature": 2.6214400000000023e-10, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.3179831000161357, "iteration": 19, "temperature": 5.242880000000005e-11, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.3311680000042543, "iteration": 20, "temperature": 1.048576000000001e-11, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.34236529999179766, "iteration": 21, "temperature": 2.097152000000002e-12, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.3549654000089504, "iteration": 22, "temperature": 4.1943040000000044e-13, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.3676062000449747, "iteration": 23, "temperature": 8.38860800000001e-14, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.37977120000869036, "iteration": 24, "temperature": 1.677721600000002e-14, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.3902860000380315, "iteration": 25, "temperature": 3.355443200000004e-15, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.40054160001454875, "iteration": 26, "temperature": 6.710886400000009e-16, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.4149829000234604, "iteration": 27, "temperature": 1.3421772800000019e-16, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.4263763999915682, "iteration": 28, "temperature": 2.6843545600000038e-17, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.43944540002848953, "iteration": 29, "temperature": 5.368709120000008e-18, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.45083460002206266, "iteration": 30, "temperature": 1.0737418240000016e-18, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.47040829999605194, "iteration": 31, "temperature": 2.1474836480000033e-19, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.483963800012134, "iteration": 32, "temperature": 4.294967296000007e-20, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5017771000275388, "iteration": 33, "temperature": 8.589934592000014e-21, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5128995000268333, "iteration": 34, "temperature": 1.7179869184000028e-21, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5240492000011727, "iteration": 35, "temperature": 3.435973836800006e-22, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5358140000025742, "iteration": 36, "temperature": 6.871947673600012e-23, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5493003000156023, "iteration": 37, "temperature": 1.3743895347200025e-23, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5603704000241123, "iteration": 38, "temperature": 2.748779069440005e-24, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5705360000138171, "iteration": 39, "temperature": 5.497558138880011e-25, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5818682000390254, "iteration": 40, "temperature": 1.0995116277760021e-25, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.5911733999964781, "iteration": 41, "temperature": 2.1990232555520045e-26, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.6014665000257082, "iteration": 42, "temperature": 4.398046511104009e-27, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.6099543000455014, "iteration": 43, "temperature": 8.79609302220802e-28, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.621105800033547, "iteration": 44, "temperature": 1.7592186044416038e-28, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.6313476000213996, "iteration": 45, "temperature": 3.518437208883208e-29, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.6415523000177927, "iteration": 46, "temperature": 7.036874417766416e-30, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.6549169000354595, "iteration": 47, "temperature": 1.4073748835532833e-30, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.6682905000052415, "iteration": 48, "temperature": 2.8147497671065665e-31, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.6842073000152595, "iteration": 49, "temperature": 5.629499534213133e-32, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.7024007000145502, "iteration": 50, "temperature": 1.1258999068426267e-32, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.7209990000119433, "iteration": 51, "temperature": 2.2517998136852534e-33, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.7359047000063583, "iteration": 52, "temperature": 4.503599627370507e-34, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.7503133999998681, "iteration": 53, "temperature": 9.007199254741015e-35, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.7648882000357844, "iteration": 54, "temperature": 1.801439850948203e-35, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.7766242999932729, "iteration": 55, "temperature": 3.602879701896406e-36, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.789865099999588, "iteration": 56, "temperature": 7.205759403792813e-37, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.8030306000146084, "iteration": 57, "temperature": 1.4411518807585627e-37, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.8170059000258334, "iteration": 58, "temperature": 2.882303761517126e-38, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.828989100002218, "iteration": 59, "temperature": 5.764607523034252e-39, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.841547799995169, "iteration": 60, "temperature": 1.1529215046068505e-39, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.8534208000055514, "iteration": 61, "temperature": 2.3058430092137014e-40, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.8657282000058331, "iteration": 62, "temperature": 4.611686018427403e-41, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.8780625000363216, "iteration": 63, "temperature": 9.223372036854807e-42, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.8917950000031851, "iteration": 64, "temperature": 1.8446744073709616e-42, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.9051903000217862, "iteration": 65, "temperature": 3.689348814741923e-43, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.9181840000092052, "iteration": 66, "temperature": 7.378697629483847e-44, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.9308262999984436, "iteration": 67, "temperature": 1.4757395258967696e-44, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.9442614000290632, "iteration": 68, "temperature": 2.951479051793539e-45, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.9576669000089169, "iteration": 69, "temperature": 5.902958103587079e-46, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.9707488000276498, "iteration": 70, "temperature": 1.180591620717416e-46, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.9839125000289641, "iteration": 71, "temperature": 2.361183241434832e-47, "initial temperature": 1000},
-{"evaluation": 72, "time": 0.9979732999927364, "iteration": 72, "temperature": 4.7223664828696645e-48, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.011111100029666, "iteration": 73, "temperature": 9.44473296573933e-49, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.025360300031025, "iteration": 74, "temperature": 1.888946593147866e-49, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.0375202000141144, "iteration": 75, "temperature": 3.777893186295732e-50, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.0505225000088103, "iteration": 76, "temperature": 7.555786372591464e-51, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.0617337000439875, "iteration": 77, "temperature": 1.511157274518293e-51, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.0740643000463024, "iteration": 78, "temperature": 3.022314549036586e-52, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.0856589000322856, "iteration": 79, "temperature": 6.044629098073172e-53, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.0971389000187628, "iteration": 80, "temperature": 1.2089258196146344e-53, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.108528100012336, "iteration": 81, "temperature": 2.417851639229269e-54, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.1220564999966882, "iteration": 82, "temperature": 4.8357032784585384e-55, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.1348627000115812, "iteration": 83, "temperature": 9.671406556917076e-56, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.1474647000432014, "iteration": 84, "temperature": 1.9342813113834154e-56, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.1615803000167944, "iteration": 85, "temperature": 3.8685626227668313e-57, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.1759010000387207, "iteration": 86, "temperature": 7.737125245533664e-58, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.1905014000367373, "iteration": 87, "temperature": 1.5474250491067328e-58, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.2050189000437967, "iteration": 88, "temperature": 3.0948500982134657e-59, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.2191973000299186, "iteration": 89, "temperature": 6.189700196426932e-60, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.2328092000097968, "iteration": 90, "temperature": 1.2379400392853864e-60, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.2455098000355065, "iteration": 91, "temperature": 2.4758800785707728e-61, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.2586307000019588, "iteration": 92, "temperature": 4.951760157141546e-62, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.272928900027182, "iteration": 93, "temperature": 9.903520314283094e-63, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.2860362000064924, "iteration": 94, "temperature": 1.980704062856619e-63, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.299514000013005, "iteration": 95, "temperature": 3.9614081257132384e-64, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.3119273000047542, "iteration": 96, "temperature": 7.922816251426477e-65, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.3297230000025593, "iteration": 97, "temperature": 1.5845632502852955e-65, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.3429154999903403, "iteration": 98, "temperature": 3.1691265005705914e-66, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.3551952000125311, "iteration": 99, "temperature": 6.338253001141183e-67, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.367356100003235, "iteration": 100, "temperature": 1.2676506002282367e-67, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.3785747000365518, "iteration": 101, "temperature": 2.5353012004564735e-68, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.3913023000350222, "iteration": 102, "temperature": 5.070602400912948e-69, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.4031319000059739, "iteration": 103, "temperature": 1.0141204801825896e-69, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.4155177000211552, "iteration": 104, "temperature": 2.0282409603651794e-70, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.4270254000439309, "iteration": 105, "temperature": 4.056481920730359e-71, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.439296500000637, "iteration": 106, "temperature": 8.112963841460718e-72, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.4513022000319324, "iteration": 107, "temperature": 1.6225927682921438e-72, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.4639377000276, "iteration": 108, "temperature": 3.245185536584288e-73, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.4760574999963865, "iteration": 109, "temperature": 6.490371073168576e-74, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.489216200017836, "iteration": 110, "temperature": 1.2980742146337152e-74, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5003558000316843, "iteration": 111, "temperature": 2.5961484292674306e-75, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5111891000415199, "iteration": 112, "temperature": 5.1922968585348613e-76, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5221409000223503, "iteration": 113, "temperature": 1.0384593717069723e-76, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5332663000444882, "iteration": 114, "temperature": 2.0769187434139447e-77, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5460180999943987, "iteration": 115, "temperature": 4.1538374868278897e-78, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5585698999930173, "iteration": 116, "temperature": 8.30767497365578e-79, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5704136000131257, "iteration": 117, "temperature": 1.6615349947311563e-79, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5810289999935776, "iteration": 118, "temperature": 3.3230699894623127e-80, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5899628000333905, "iteration": 119, "temperature": 6.646139978924626e-81, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.5990303000435233, "iteration": 120, "temperature": 1.3292279957849253e-81, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.6075081000453793, "iteration": 121, "temperature": 2.6584559915698504e-82, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.6163244000053965, "iteration": 122, "temperature": 5.316911983139701e-83, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.6251115000341088, "iteration": 123, "temperature": 1.0633823966279402e-83, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.6364993000170216, "iteration": 124, "temperature": 2.1267647932558804e-84, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.6484771000104956, "iteration": 125, "temperature": 4.2535295865117613e-85, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.661892500007525, "iteration": 126, "temperature": 8.507059173023524e-86, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.674899000034202, "iteration": 127, "temperature": 1.7014118346047047e-86, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.688337900035549, "iteration": 128, "temperature": 3.4028236692094097e-87, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.7026796000427566, "iteration": 129, "temperature": 6.80564733841882e-88, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.717152299999725, "iteration": 130, "temperature": 1.3611294676837642e-88, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.73048430000199, "iteration": 131, "temperature": 2.7222589353675284e-89, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.7437045000260696, "iteration": 132, "temperature": 5.444517870735057e-90, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.756792200030759, "iteration": 133, "temperature": 1.0889035741470115e-90, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.7705291000311263, "iteration": 134, "temperature": 2.177807148294023e-91, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.7841723000165075, "iteration": 135, "temperature": 4.355614296588046e-92, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.7967559000244364, "iteration": 136, "temperature": 8.711228593176093e-93, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.8089322000159882, "iteration": 137, "temperature": 1.7422457186352188e-93, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.8218899000203237, "iteration": 138, "temperature": 3.4844914372704377e-94, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.835271499992814, "iteration": 139, "temperature": 6.968982874540876e-95, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.847926100017503, "iteration": 140, "temperature": 1.3937965749081752e-95, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.8603042000322603, "iteration": 141, "temperature": 2.7875931498163505e-96, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.8739032000303268, "iteration": 142, "temperature": 5.575186299632702e-97, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.8875242000212893, "iteration": 143, "temperature": 1.1150372599265404e-97, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.9008066999958828, "iteration": 144, "temperature": 2.230074519853081e-98, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.9122690000222065, "iteration": 145, "temperature": 4.460149039706162e-99, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.925799000018742, "iteration": 146, "temperature": 8.920298079412325e-100, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.939350500004366, "iteration": 147, "temperature": 1.784059615882465e-100, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.9539755000150762, "iteration": 148, "temperature": 3.5681192317649305e-101, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.9672787000308745, "iteration": 149, "temperature": 7.1362384635298615e-102, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.9796795000438578, "iteration": 150, "temperature": 1.4272476927059723e-102, "initial temperature": 1000},
-{"evaluation": 72, "time": 1.993680100014899, "iteration": 151, "temperature": 2.854495385411945e-103, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.006928600021638, "iteration": 152, "temperature": 5.70899077082389e-104, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.0221752999932505, "iteration": 153, "temperature": 1.1417981541647781e-104, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.0370407000300474, "iteration": 154, "temperature": 2.2835963083295566e-105, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.0515711000189185, "iteration": 155, "temperature": 4.567192616659114e-106, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.0646410000044852, "iteration": 156, "temperature": 9.134385233318227e-107, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.0794963000225835, "iteration": 157, "temperature": 1.8268770466636455e-107, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.09458660002565, "iteration": 158, "temperature": 3.6537540933272914e-108, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.1090764999971725, "iteration": 159, "temperature": 7.307508186654583e-109, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.1229211000027135, "iteration": 160, "temperature": 1.4615016373309168e-109, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.135899899993092, "iteration": 161, "temperature": 2.923003274661834e-110, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.154681799991522, "iteration": 162, "temperature": 5.846006549323668e-111, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.1691743000410497, "iteration": 163, "temperature": 1.1692013098647336e-111, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.183469600044191, "iteration": 164, "temperature": 2.3384026197294674e-112, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.1962761000031605, "iteration": 165, "temperature": 4.6768052394589347e-113, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.209224499994889, "iteration": 166, "temperature": 9.35361047891787e-114, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.221973000036087, "iteration": 167, "temperature": 1.870722095783574e-114, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.2380144000053406, "iteration": 168, "temperature": 3.7414441915671485e-115, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.2508263000054285, "iteration": 169, "temperature": 7.482888383134298e-116, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.264292400039267, "iteration": 170, "temperature": 1.4965776766268595e-116, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.2767435000278056, "iteration": 171, "temperature": 2.9931553532537193e-117, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.291268900036812, "iteration": 172, "temperature": 5.986310706507439e-118, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.306436500046402, "iteration": 173, "temperature": 1.197262141301488e-118, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.320662300044205, "iteration": 174, "temperature": 2.394524282602976e-119, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.333885400032159, "iteration": 175, "temperature": 4.7890485652059524e-120, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.3458102000295185, "iteration": 176, "temperature": 9.578097130411906e-121, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.356986400031019, "iteration": 177, "temperature": 1.9156194260823813e-121, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.368358800013084, "iteration": 178, "temperature": 3.831238852164763e-122, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.3832648000097834, "iteration": 179, "temperature": 7.662477704329526e-123, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.3988764000241645, "iteration": 180, "temperature": 1.5324955408659052e-123, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.4136755000217818, "iteration": 181, "temperature": 3.0649910817318107e-124, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.4257947000442073, "iteration": 182, "temperature": 6.129982163463622e-125, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.440021999995224, "iteration": 183, "temperature": 1.2259964326927245e-125, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.4565177999902517, "iteration": 184, "temperature": 2.4519928653854492e-126, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.471391700033564, "iteration": 185, "temperature": 4.903985730770899e-127, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.483620700018946, "iteration": 186, "temperature": 9.807971461541797e-128, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.494855800003279, "iteration": 187, "temperature": 1.9615942923083596e-128, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.5085639000171795, "iteration": 188, "temperature": 3.9231885846167197e-129, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.5225498999934644, "iteration": 189, "temperature": 7.84637716923344e-130, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.5362061000196263, "iteration": 190, "temperature": 1.569275433846688e-130, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.551184700045269, "iteration": 191, "temperature": 3.1385508676933763e-131, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.5620514000183903, "iteration": 192, "temperature": 6.277101735386753e-132, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.573942299990449, "iteration": 193, "temperature": 1.2554203470773506e-132, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.5850716000422835, "iteration": 194, "temperature": 2.5108406941547013e-133, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.597925500012934, "iteration": 195, "temperature": 5.021681388309403e-134, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.6116719000274315, "iteration": 196, "temperature": 1.0043362776618806e-134, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.624388199998066, "iteration": 197, "temperature": 2.0086725553237614e-135, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.635839599999599, "iteration": 198, "temperature": 4.017345110647523e-136, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.6447636000229977, "iteration": 199, "temperature": 8.034690221295045e-137, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.6555069000460207, "iteration": 200, "temperature": 1.606938044259009e-137, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.6664992000442, "iteration": 201, "temperature": 3.2138760885180185e-138, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.6774028000072576, "iteration": 202, "temperature": 6.427752177036037e-139, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.689042000041809, "iteration": 203, "temperature": 1.2855504354072075e-139, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.701172100030817, "iteration": 204, "temperature": 2.571100870814415e-140, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.712564699992072, "iteration": 205, "temperature": 5.14220174162883e-141, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.7278367000399157, "iteration": 206, "temperature": 1.028440348325766e-141, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.7421746000181884, "iteration": 207, "temperature": 2.0568806966515323e-142, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.756932499993127, "iteration": 208, "temperature": 4.113761393303065e-143, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.770350300008431, "iteration": 209, "temperature": 8.227522786606131e-144, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.7854026000131853, "iteration": 210, "temperature": 1.645504557321226e-144, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.802078100037761, "iteration": 211, "temperature": 3.291009114642452e-145, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.8207995000411756, "iteration": 212, "temperature": 6.5820182292849045e-146, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.8393702000030316, "iteration": 213, "temperature": 1.316403645856981e-146, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.8528565000160597, "iteration": 214, "temperature": 2.632807291713962e-147, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.865084199991543, "iteration": 215, "temperature": 5.2656145834279244e-148, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.875156700029038, "iteration": 216, "temperature": 1.053122916685585e-148, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.884560100035742, "iteration": 217, "temperature": 2.10624583337117e-149, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.894147899991367, "iteration": 218, "temperature": 4.2124916667423403e-150, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.9034769000136293, "iteration": 219, "temperature": 8.424983333484681e-151, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.9128263000166044, "iteration": 220, "temperature": 1.684996666696936e-151, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.9282568999915384, "iteration": 221, "temperature": 3.3699933333938725e-152, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.9424734000349417, "iteration": 222, "temperature": 6.739986666787745e-153, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.9609509000438266, "iteration": 223, "temperature": 1.347997333357549e-153, "initial temperature": 1000},
-{"evaluation": 72, "time": 2.981847800023388, "iteration": 224, "temperature": 2.695994666715098e-154, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.001446800015401, "iteration": 225, "temperature": 5.391989333430197e-155, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.0158007999998517, "iteration": 226, "temperature": 1.0783978666860394e-155, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.029857100045774, "iteration": 227, "temperature": 2.156795733372079e-156, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.038704200007487, "iteration": 228, "temperature": 4.313591466744158e-157, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.0482583999983035, "iteration": 229, "temperature": 8.627182933488316e-158, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.0570759000256658, "iteration": 230, "temperature": 1.7254365866976633e-158, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.0678222000133246, "iteration": 231, "temperature": 3.450873173395327e-159, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.075987600022927, "iteration": 232, "temperature": 6.901746346790654e-160, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.0868842999916524, "iteration": 233, "temperature": 1.3803492693581308e-160, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.1033073000144213, "iteration": 234, "temperature": 2.760698538716262e-161, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.1247872000094503, "iteration": 235, "temperature": 5.521397077432524e-162, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.1369242999935523, "iteration": 236, "temperature": 1.1042794154865048e-162, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.1485163000179455, "iteration": 237, "temperature": 2.20855883097301e-163, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.158977400045842, "iteration": 238, "temperature": 4.41711766194602e-164, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.1679757999954745, "iteration": 239, "temperature": 8.83423532389204e-165, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.182203100004699, "iteration": 240, "temperature": 1.766847064778408e-165, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.192477400007192, "iteration": 241, "temperature": 3.533694129556816e-166, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.20636030001333, "iteration": 242, "temperature": 7.067388259113633e-167, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.2177854999899864, "iteration": 243, "temperature": 1.4134776518227266e-167, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.2327460999949835, "iteration": 244, "temperature": 2.8269553036454534e-168, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.2499451999901794, "iteration": 245, "temperature": 5.653910607290907e-169, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.266704600013327, "iteration": 246, "temperature": 1.1307821214581816e-169, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.2809857000247575, "iteration": 247, "temperature": 2.2615642429163634e-170, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.2931982000009157, "iteration": 248, "temperature": 4.523128485832727e-171, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.3070921000326052, "iteration": 249, "temperature": 9.046256971665455e-172, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.3201784000266343, "iteration": 250, "temperature": 1.8092513943330912e-172, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.3314877999946475, "iteration": 251, "temperature": 3.618502788666183e-173, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.344199000042863, "iteration": 252, "temperature": 7.237005577332366e-174, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.3562848000437953, "iteration": 253, "temperature": 1.4474011154664732e-174, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.3707518000155687, "iteration": 254, "temperature": 2.8948022309329465e-175, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.3859265000210144, "iteration": 255, "temperature": 5.789604461865893e-176, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.401211299991701, "iteration": 256, "temperature": 1.1579208923731787e-176, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.4223584000137635, "iteration": 257, "temperature": 2.3158417847463575e-177, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.4414429000462405, "iteration": 258, "temperature": 4.631683569492715e-178, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.456100500014145, "iteration": 259, "temperature": 9.263367138985431e-179, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.4711787000414915, "iteration": 260, "temperature": 1.8526734277970865e-179, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.4859462000313215, "iteration": 261, "temperature": 3.7053468555941733e-180, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.499745300039649, "iteration": 262, "temperature": 7.410693711188347e-181, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.5115522000123747, "iteration": 263, "temperature": 1.4821387422376695e-181, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.525108200032264, "iteration": 264, "temperature": 2.964277484475339e-182, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.5434668000089005, "iteration": 265, "temperature": 5.928554968950679e-183, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.558035699999891, "iteration": 266, "temperature": 1.1857109937901358e-183, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.572152900043875, "iteration": 267, "temperature": 2.371421987580272e-184, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.5850963999982923, "iteration": 268, "temperature": 4.742843975160544e-185, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.5989025000017136, "iteration": 269, "temperature": 9.485687950321088e-186, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.611707000003662, "iteration": 270, "temperature": 1.8971375900642175e-186, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.624705200025346, "iteration": 271, "temperature": 3.794275180128435e-187, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.6374139999970794, "iteration": 272, "temperature": 7.588550360256871e-188, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.6566623999970034, "iteration": 273, "temperature": 1.5177100720513742e-188, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.672549800015986, "iteration": 274, "temperature": 3.0354201441027486e-189, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.685761700035073, "iteration": 275, "temperature": 6.070840288205498e-190, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.6987547000171617, "iteration": 276, "temperature": 1.2141680576410995e-190, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.711562800046522, "iteration": 277, "temperature": 2.428336115282199e-191, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.72640980000142, "iteration": 278, "temperature": 4.856672230564398e-192, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.739870899997186, "iteration": 279, "temperature": 9.713344461128796e-193, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.7521733000176027, "iteration": 280, "temperature": 1.9426688922257594e-193, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.7643882000120357, "iteration": 281, "temperature": 3.8853377844515193e-194, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.7771335000288673, "iteration": 282, "temperature": 7.770675568903038e-195, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.789914100023452, "iteration": 283, "temperature": 1.5541351137806077e-195, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.8041453000041656, "iteration": 284, "temperature": 3.1082702275612155e-196, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.8187559000216424, "iteration": 285, "temperature": 6.216540455122432e-197, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.830078000028152, "iteration": 286, "temperature": 1.2433080910244864e-197, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.8429824000340886, "iteration": 287, "temperature": 2.486616182048973e-198, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.855388000025414, "iteration": 288, "temperature": 4.973232364097947e-199, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.8673405000008643, "iteration": 289, "temperature": 9.946464728195893e-200, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.8824323000153527, "iteration": 290, "temperature": 1.9892929456391788e-200, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.894733300025109, "iteration": 291, "temperature": 3.978585891278358e-201, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.9122091000317596, "iteration": 292, "temperature": 7.957171782556716e-202, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.9242871000315063, "iteration": 293, "temperature": 1.5914343565113432e-202, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.9396836000378244, "iteration": 294, "temperature": 3.1828687130226865e-203, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.9525936000281945, "iteration": 295, "temperature": 6.3657374260453735e-204, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.963859000010416, "iteration": 296, "temperature": 1.2731474852090748e-204, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.975727800047025, "iteration": 297, "temperature": 2.5462949704181497e-205, "initial temperature": 1000},
-{"evaluation": 72, "time": 3.9894559000385925, "iteration": 298, "temperature": 5.0925899408363e-206, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.001943800016306, "iteration": 299, "temperature": 1.0185179881672599e-206, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.015978100011125, "iteration": 300, "temperature": 2.03703597633452e-207, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.027948200004175, "iteration": 301, "temperature": 4.07407195266904e-208, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.04085660004057, "iteration": 302, "temperature": 8.14814390533808e-209, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.052278999995906, "iteration": 303, "temperature": 1.6296287810676162e-209, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.066284100001212, "iteration": 304, "temperature": 3.259257562135233e-210, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.075927100027911, "iteration": 305, "temperature": 6.518515124270466e-211, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.088305400044192, "iteration": 306, "temperature": 1.3037030248540932e-211, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.098594400042202, "iteration": 307, "temperature": 2.6074060497081864e-212, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.108923299994785, "iteration": 308, "temperature": 5.2148120994163734e-213, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.1217463000211865, "iteration": 309, "temperature": 1.0429624198832747e-213, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.134669099992607, "iteration": 310, "temperature": 2.0859248397665494e-214, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.149147000047378, "iteration": 311, "temperature": 4.1718496795330993e-215, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.159816200030036, "iteration": 312, "temperature": 8.3436993590662e-216, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.173742300015874, "iteration": 313, "temperature": 1.66873987181324e-216, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.184629500028677, "iteration": 314, "temperature": 3.3374797436264804e-217, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.195087100029923, "iteration": 315, "temperature": 6.674959487252961e-218, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.207915800041519, "iteration": 316, "temperature": 1.3349918974505923e-218, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.219285800005309, "iteration": 317, "temperature": 2.669983794901185e-219, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.233691700035706, "iteration": 318, "temperature": 5.33996758980237e-220, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.2454699000227265, "iteration": 319, "temperature": 1.067993517960474e-220, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.2566680000163615, "iteration": 320, "temperature": 2.135987035920948e-221, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.26958270004252, "iteration": 321, "temperature": 4.2719740718418966e-222, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.281656900013331, "iteration": 322, "temperature": 8.543948143683793e-223, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.292361800034996, "iteration": 323, "temperature": 1.7087896287367588e-223, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.308240799990017, "iteration": 324, "temperature": 3.4175792574735175e-224, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.323208599991631, "iteration": 325, "temperature": 6.835158514947036e-225, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.336759400030132, "iteration": 326, "temperature": 1.3670317029894073e-225, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.350770900025964, "iteration": 327, "temperature": 2.734063405978815e-226, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.360987299995031, "iteration": 328, "temperature": 5.46812681195763e-227, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.373731800005771, "iteration": 329, "temperature": 1.093625362391526e-227, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.384533900010865, "iteration": 330, "temperature": 2.187250724783052e-228, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.3970010000048205, "iteration": 331, "temperature": 4.374501449566104e-229, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.408208700013347, "iteration": 332, "temperature": 8.749002899132208e-230, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.421610800025519, "iteration": 333, "temperature": 1.7498005798264416e-230, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.434351700008847, "iteration": 334, "temperature": 3.499601159652884e-231, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.4443336999975145, "iteration": 335, "temperature": 6.999202319305768e-232, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.454252400028054, "iteration": 336, "temperature": 1.3998404638611536e-232, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.4664655000087805, "iteration": 337, "temperature": 2.799680927722307e-233, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.475990800012369, "iteration": 338, "temperature": 5.599361855444615e-234, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.49000089999754, "iteration": 339, "temperature": 1.1198723710889229e-234, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.501464000029955, "iteration": 340, "temperature": 2.2397447421778458e-235, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.513090700027533, "iteration": 341, "temperature": 4.479489484355692e-236, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.529446200001985, "iteration": 342, "temperature": 8.958978968711384e-237, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.5428694000002, "iteration": 343, "temperature": 1.791795793742277e-237, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.556381700036582, "iteration": 344, "temperature": 3.583591587484554e-238, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.572325400018599, "iteration": 345, "temperature": 7.1671831749691075e-239, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.5857490000198595, "iteration": 346, "temperature": 1.4334366349938216e-239, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.598033400019631, "iteration": 347, "temperature": 2.866873269987643e-240, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.61122250003973, "iteration": 348, "temperature": 5.7337465399752865e-241, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.623748300014995, "iteration": 349, "temperature": 1.1467493079950574e-241, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.641560600022785, "iteration": 350, "temperature": 2.2934986159901147e-242, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.659896400000434, "iteration": 351, "temperature": 4.58699723198023e-243, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.679152800003067, "iteration": 352, "temperature": 9.17399446396046e-244, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.696009300008882, "iteration": 353, "temperature": 1.834798892792092e-244, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.71328770002583, "iteration": 354, "temperature": 3.669597785584184e-245, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.7315077999955975, "iteration": 355, "temperature": 7.339195571168369e-246, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.747815900016576, "iteration": 356, "temperature": 1.467839114233674e-246, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.773758299998008, "iteration": 357, "temperature": 2.935678228467348e-247, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.786857400031295, "iteration": 358, "temperature": 5.871356456934696e-248, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.800246600003447, "iteration": 359, "temperature": 1.1742712913869393e-248, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.814368900028057, "iteration": 360, "temperature": 2.348542582773879e-249, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.826677000033669, "iteration": 361, "temperature": 4.697085165547758e-250, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.839855200028978, "iteration": 362, "temperature": 9.394170331095516e-251, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.850106700032484, "iteration": 363, "temperature": 1.8788340662191034e-251, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.861697699991055, "iteration": 364, "temperature": 3.757668132438207e-252, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.873025200038683, "iteration": 365, "temperature": 7.515336264876415e-253, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.883020800014492, "iteration": 366, "temperature": 1.503067252975283e-253, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.897371500032023, "iteration": 367, "temperature": 3.006134505950566e-254, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.911653299990576, "iteration": 368, "temperature": 6.012269011901132e-255, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.9272711999947205, "iteration": 369, "temperature": 1.2024538023802265e-255, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.939368000021204, "iteration": 370, "temperature": 2.4049076047604532e-256, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.951300100015942, "iteration": 371, "temperature": 4.809815209520907e-257, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.962258999992628, "iteration": 372, "temperature": 9.619630419041814e-258, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.973087300022598, "iteration": 373, "temperature": 1.923926083808363e-258, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.985474899993278, "iteration": 374, "temperature": 3.847852167616726e-259, "initial temperature": 1000},
-{"evaluation": 72, "time": 4.999104200047441, "iteration": 375, "temperature": 7.695704335233452e-260, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.010897500033025, "iteration": 376, "temperature": 1.5391408670466904e-260, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.024143900023773, "iteration": 377, "temperature": 3.078281734093381e-261, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.03828550002072, "iteration": 378, "temperature": 6.156563468186763e-262, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.050332200014964, "iteration": 379, "temperature": 1.2313126936373526e-262, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.061644000001252, "iteration": 380, "temperature": 2.4626253872747054e-263, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.071559800009709, "iteration": 381, "temperature": 4.925250774549411e-264, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.083687000034843, "iteration": 382, "temperature": 9.850501549098823e-265, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.096633300010581, "iteration": 383, "temperature": 1.9701003098197647e-265, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.107514700037427, "iteration": 384, "temperature": 3.94020061963953e-266, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.11650380003266, "iteration": 385, "temperature": 7.88040123927906e-267, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.1363066000049, "iteration": 386, "temperature": 1.576080247855812e-267, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.154874800005928, "iteration": 387, "temperature": 3.1521604957116245e-268, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.170052300032694, "iteration": 388, "temperature": 6.304320991423249e-269, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.181615800014697, "iteration": 389, "temperature": 1.2608641982846499e-269, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.192736600001808, "iteration": 390, "temperature": 2.5217283965693e-270, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.203799500013702, "iteration": 391, "temperature": 5.043456793138601e-271, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.21661210001912, "iteration": 392, "temperature": 1.0086913586277202e-271, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.2275775000452995, "iteration": 393, "temperature": 2.0173827172554406e-272, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.237907800008543, "iteration": 394, "temperature": 4.034765434510881e-273, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.248936199990567, "iteration": 395, "temperature": 8.069530869021763e-274, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.262009400001261, "iteration": 396, "temperature": 1.6139061738043526e-274, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.274659499991685, "iteration": 397, "temperature": 3.2278123476087057e-275, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.287079000030644, "iteration": 398, "temperature": 6.455624695217412e-276, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.304212000046391, "iteration": 399, "temperature": 1.2911249390434825e-276, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.321726800000761, "iteration": 400, "temperature": 2.582249878086965e-277, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.333165000018198, "iteration": 401, "temperature": 5.1644997561739305e-278, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.345686900021974, "iteration": 402, "temperature": 1.0328999512347861e-278, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.3548061000183225, "iteration": 403, "temperature": 2.065799902469572e-279, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.364047700015362, "iteration": 404, "temperature": 4.1315998049391445e-280, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.377155099995434, "iteration": 405, "temperature": 8.263199609878289e-281, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.389067200012505, "iteration": 406, "temperature": 1.6526399219756578e-281, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.400976900011301, "iteration": 407, "temperature": 3.3052798439513158e-282, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.42554750002455, "iteration": 408, "temperature": 6.610559687902632e-283, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.447951300011482, "iteration": 409, "temperature": 1.3221119375805266e-283, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.463486100023147, "iteration": 410, "temperature": 2.6442238751610534e-284, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.473682800016832, "iteration": 411, "temperature": 5.288447750322107e-285, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.483043799991719, "iteration": 412, "temperature": 1.0576895500644215e-285, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.4932168000377715, "iteration": 413, "temperature": 2.115379100128843e-286, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.506614300014917, "iteration": 414, "temperature": 4.2307582002576863e-287, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.521782400028314, "iteration": 415, "temperature": 8.461516400515374e-288, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.538174000044819, "iteration": 416, "temperature": 1.6923032801030748e-288, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.553189300000668, "iteration": 417, "temperature": 3.3846065602061496e-289, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.564027699991129, "iteration": 418, "temperature": 6.7692131204123e-290, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.574424099992029, "iteration": 419, "temperature": 1.3538426240824602e-290, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.582460900011938, "iteration": 420, "temperature": 2.7076852481649204e-291, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.592143000045326, "iteration": 421, "temperature": 5.415370496329841e-292, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.604178600013256, "iteration": 422, "temperature": 1.0830740992659683e-292, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.613243700005114, "iteration": 423, "temperature": 2.1661481985319367e-293, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.623492999991868, "iteration": 424, "temperature": 4.3322963970638735e-294, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.631863699993119, "iteration": 425, "temperature": 8.664592794127748e-295, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.639731200004462, "iteration": 426, "temperature": 1.7329185588255497e-295, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.651042700046673, "iteration": 427, "temperature": 3.4658371176511e-296, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.6596168000251055, "iteration": 428, "temperature": 6.9316742353022e-297, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.671059100015555, "iteration": 429, "temperature": 1.3863348470604401e-297, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.682073700008914, "iteration": 430, "temperature": 2.7726696941208805e-298, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.691727700002957, "iteration": 431, "temperature": 5.545339388241761e-299, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.707351599994581, "iteration": 432, "temperature": 1.1090678776483522e-299, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.72206100000767, "iteration": 433, "temperature": 2.2181357552967046e-300, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.741552599996794, "iteration": 434, "temperature": 4.436271510593409e-301, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.758239799994044, "iteration": 435, "temperature": 8.872543021186819e-302, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.770900700008497, "iteration": 436, "temperature": 1.774508604237364e-302, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.779867600009311, "iteration": 437, "temperature": 3.549017208474728e-303, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.78925580001669, "iteration": 438, "temperature": 7.098034416949456e-304, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.801424600009341, "iteration": 439, "temperature": 1.4196068833898913e-304, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.815150700043887, "iteration": 440, "temperature": 2.8392137667797826e-305, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.830234799999744, "iteration": 441, "temperature": 5.6784275335595655e-306, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.842492900032084, "iteration": 442, "temperature": 1.1356855067119131e-306, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.857551400025841, "iteration": 443, "temperature": 2.2713710134238265e-307, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.8718514000065625, "iteration": 444, "temperature": 4.542742026847653e-308, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.882170099997893, "iteration": 445, "temperature": 9.08548405369531e-309, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.900419800018426, "iteration": 446, "temperature": 1.817096810739063e-309, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.916101000038907, "iteration": 447, "temperature": 3.63419362147813e-310, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.933572000009008, "iteration": 448, "temperature": 7.2683872429565e-311, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.951951500028372, "iteration": 449, "temperature": 1.4536774485913e-311, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.965325299999677, "iteration": 450, "temperature": 2.907354897184e-312, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.974772399989888, "iteration": 451, "temperature": 5.8147097944e-313, "initial temperature": 1000},
-{"evaluation": 72, "time": 5.984224700019695, "iteration": 452, "temperature": 1.16294195887e-313, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.002987699990626, "iteration": 453, "temperature": 2.325883918e-314, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.017969000036828, "iteration": 454, "temperature": 4.651767837e-315, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.033684800029732, "iteration": 455, "temperature": 9.30353565e-316, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.045861000020523, "iteration": 456, "temperature": 1.86070715e-316, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.05625650001457, "iteration": 457, "temperature": 3.721414e-317, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.069315700035077, "iteration": 458, "temperature": 7.442827e-318, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.081410000042524, "iteration": 459, "temperature": 1.488565e-318, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.09319810004672, "iteration": 460, "temperature": 2.97714e-319, "initial temperature": 1000},
-{"evaluation": 72, "time": 6.1047823000117205, "iteration": 461, "temperature": 5.9545e-320, "initial temperature": 1000},
-{"evaluation": 99, "time": 6.115677100024186, "iteration": 462, "temperature": 1.1907e-320, "initial temperature": 1000},
-{"evaluation": 99, "time": 6.124324200034607, "iteration": 463, "temperature": 2.38e-321, "initial temperature": 1000},
-{"evaluation": 99, "time": 6.13553700002376, "iteration": 464, "temperature": 4.74e-322, "initial temperature": 1000},
-{"evaluation": 99, "time": 6.143504900042899, "iteration": 465, "temperature": 9.4e-323, "initial temperature": 1000},
-{"evaluation": 99, "time": 6.160093400045298, "iteration": 466, "temperature": 2e-323, "initial temperature": 1000},
-{"evaluation": 99, "time": 6.171900900022592, "iteration": 467, "temperature": 5e-324, "initial temperature": 1000}
-]}
+{
+  "data": [
+    {
+      "evaluation": 72,
+      "time": 0.001710000040475279,
+      "iteration": 0,
+      "temperature": 1000,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.022639600036200136,
+      "iteration": 1,
+      "temperature": 200.0,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.03885410004295409,
+      "iteration": 2,
+      "temperature": 40.0,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.05980300001101568,
+      "iteration": 3,
+      "temperature": 8.0,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.07429530000081286,
+      "iteration": 4,
+      "temperature": 1.6,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.09617110004182905,
+      "iteration": 5,
+      "temperature": 0.32000000000000006,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.11054270004387945,
+      "iteration": 6,
+      "temperature": 0.06400000000000002,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.1246470000478439,
+      "iteration": 7,
+      "temperature": 0.012800000000000004,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.13908260001335293,
+      "iteration": 8,
+      "temperature": 0.002560000000000001,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.1532227999996394,
+      "iteration": 9,
+      "temperature": 0.0005120000000000002,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.16760350001277402,
+      "iteration": 10,
+      "temperature": 0.00010240000000000005,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.1818535000202246,
+      "iteration": 11,
+      "temperature": 2.048000000000001e-5,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.2005743000190705,
+      "iteration": 12,
+      "temperature": 4.096000000000002e-6,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.21880989999044687,
+      "iteration": 13,
+      "temperature": 8.192000000000005e-7,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.23682900000130758,
+      "iteration": 14,
+      "temperature": 1.638400000000001e-7,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.25409360002959147,
+      "iteration": 15,
+      "temperature": 3.276800000000002e-8,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.2664208000060171,
+      "iteration": 16,
+      "temperature": 6.553600000000004e-9,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.2818521000444889,
+      "iteration": 17,
+      "temperature": 1.310720000000001e-9,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.30052580003393814,
+      "iteration": 18,
+      "temperature": 2.6214400000000023e-10,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.3179831000161357,
+      "iteration": 19,
+      "temperature": 5.242880000000005e-11,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.3311680000042543,
+      "iteration": 20,
+      "temperature": 1.048576000000001e-11,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.34236529999179766,
+      "iteration": 21,
+      "temperature": 2.097152000000002e-12,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.3549654000089504,
+      "iteration": 22,
+      "temperature": 4.1943040000000044e-13,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.3676062000449747,
+      "iteration": 23,
+      "temperature": 8.38860800000001e-14,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.37977120000869036,
+      "iteration": 24,
+      "temperature": 1.677721600000002e-14,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.3902860000380315,
+      "iteration": 25,
+      "temperature": 3.355443200000004e-15,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.40054160001454875,
+      "iteration": 26,
+      "temperature": 6.710886400000009e-16,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.4149829000234604,
+      "iteration": 27,
+      "temperature": 1.3421772800000019e-16,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.4263763999915682,
+      "iteration": 28,
+      "temperature": 2.6843545600000038e-17,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.43944540002848953,
+      "iteration": 29,
+      "temperature": 5.368709120000008e-18,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.45083460002206266,
+      "iteration": 30,
+      "temperature": 1.0737418240000016e-18,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.47040829999605194,
+      "iteration": 31,
+      "temperature": 2.1474836480000033e-19,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.483963800012134,
+      "iteration": 32,
+      "temperature": 4.294967296000007e-20,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5017771000275388,
+      "iteration": 33,
+      "temperature": 8.589934592000014e-21,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5128995000268333,
+      "iteration": 34,
+      "temperature": 1.7179869184000028e-21,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5240492000011727,
+      "iteration": 35,
+      "temperature": 3.435973836800006e-22,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5358140000025742,
+      "iteration": 36,
+      "temperature": 6.871947673600012e-23,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5493003000156023,
+      "iteration": 37,
+      "temperature": 1.3743895347200025e-23,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5603704000241123,
+      "iteration": 38,
+      "temperature": 2.748779069440005e-24,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5705360000138171,
+      "iteration": 39,
+      "temperature": 5.497558138880011e-25,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5818682000390254,
+      "iteration": 40,
+      "temperature": 1.0995116277760021e-25,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.5911733999964781,
+      "iteration": 41,
+      "temperature": 2.1990232555520045e-26,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.6014665000257082,
+      "iteration": 42,
+      "temperature": 4.398046511104009e-27,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.6099543000455014,
+      "iteration": 43,
+      "temperature": 8.79609302220802e-28,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.621105800033547,
+      "iteration": 44,
+      "temperature": 1.7592186044416038e-28,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.6313476000213996,
+      "iteration": 45,
+      "temperature": 3.518437208883208e-29,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.6415523000177927,
+      "iteration": 46,
+      "temperature": 7.036874417766416e-30,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.6549169000354595,
+      "iteration": 47,
+      "temperature": 1.4073748835532833e-30,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.6682905000052415,
+      "iteration": 48,
+      "temperature": 2.8147497671065665e-31,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.6842073000152595,
+      "iteration": 49,
+      "temperature": 5.629499534213133e-32,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.7024007000145502,
+      "iteration": 50,
+      "temperature": 1.1258999068426267e-32,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.7209990000119433,
+      "iteration": 51,
+      "temperature": 2.2517998136852534e-33,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.7359047000063583,
+      "iteration": 52,
+      "temperature": 4.503599627370507e-34,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.7503133999998681,
+      "iteration": 53,
+      "temperature": 9.007199254741015e-35,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.7648882000357844,
+      "iteration": 54,
+      "temperature": 1.801439850948203e-35,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.7766242999932729,
+      "iteration": 55,
+      "temperature": 3.602879701896406e-36,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.789865099999588,
+      "iteration": 56,
+      "temperature": 7.205759403792813e-37,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.8030306000146084,
+      "iteration": 57,
+      "temperature": 1.4411518807585627e-37,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.8170059000258334,
+      "iteration": 58,
+      "temperature": 2.882303761517126e-38,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.828989100002218,
+      "iteration": 59,
+      "temperature": 5.764607523034252e-39,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.841547799995169,
+      "iteration": 60,
+      "temperature": 1.1529215046068505e-39,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.8534208000055514,
+      "iteration": 61,
+      "temperature": 2.3058430092137014e-40,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.8657282000058331,
+      "iteration": 62,
+      "temperature": 4.611686018427403e-41,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.8780625000363216,
+      "iteration": 63,
+      "temperature": 9.223372036854807e-42,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.8917950000031851,
+      "iteration": 64,
+      "temperature": 1.8446744073709616e-42,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.9051903000217862,
+      "iteration": 65,
+      "temperature": 3.689348814741923e-43,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.9181840000092052,
+      "iteration": 66,
+      "temperature": 7.378697629483847e-44,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.9308262999984436,
+      "iteration": 67,
+      "temperature": 1.4757395258967696e-44,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.9442614000290632,
+      "iteration": 68,
+      "temperature": 2.951479051793539e-45,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.9576669000089169,
+      "iteration": 69,
+      "temperature": 5.902958103587079e-46,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.9707488000276498,
+      "iteration": 70,
+      "temperature": 1.180591620717416e-46,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.9839125000289641,
+      "iteration": 71,
+      "temperature": 2.361183241434832e-47,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 0.9979732999927364,
+      "iteration": 72,
+      "temperature": 4.7223664828696645e-48,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.011111100029666,
+      "iteration": 73,
+      "temperature": 9.44473296573933e-49,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.025360300031025,
+      "iteration": 74,
+      "temperature": 1.888946593147866e-49,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.0375202000141144,
+      "iteration": 75,
+      "temperature": 3.777893186295732e-50,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.0505225000088103,
+      "iteration": 76,
+      "temperature": 7.555786372591464e-51,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.0617337000439875,
+      "iteration": 77,
+      "temperature": 1.511157274518293e-51,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.0740643000463024,
+      "iteration": 78,
+      "temperature": 3.022314549036586e-52,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.0856589000322856,
+      "iteration": 79,
+      "temperature": 6.044629098073172e-53,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.0971389000187628,
+      "iteration": 80,
+      "temperature": 1.2089258196146344e-53,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.108528100012336,
+      "iteration": 81,
+      "temperature": 2.417851639229269e-54,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.1220564999966882,
+      "iteration": 82,
+      "temperature": 4.8357032784585384e-55,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.1348627000115812,
+      "iteration": 83,
+      "temperature": 9.671406556917076e-56,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.1474647000432014,
+      "iteration": 84,
+      "temperature": 1.9342813113834154e-56,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.1615803000167944,
+      "iteration": 85,
+      "temperature": 3.8685626227668313e-57,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.1759010000387207,
+      "iteration": 86,
+      "temperature": 7.737125245533664e-58,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.1905014000367373,
+      "iteration": 87,
+      "temperature": 1.5474250491067328e-58,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.2050189000437967,
+      "iteration": 88,
+      "temperature": 3.0948500982134657e-59,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.2191973000299186,
+      "iteration": 89,
+      "temperature": 6.189700196426932e-60,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.2328092000097968,
+      "iteration": 90,
+      "temperature": 1.2379400392853864e-60,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.2455098000355065,
+      "iteration": 91,
+      "temperature": 2.4758800785707728e-61,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.2586307000019588,
+      "iteration": 92,
+      "temperature": 4.951760157141546e-62,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.272928900027182,
+      "iteration": 93,
+      "temperature": 9.903520314283094e-63,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.2860362000064924,
+      "iteration": 94,
+      "temperature": 1.980704062856619e-63,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.299514000013005,
+      "iteration": 95,
+      "temperature": 3.9614081257132384e-64,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.3119273000047542,
+      "iteration": 96,
+      "temperature": 7.922816251426477e-65,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.3297230000025593,
+      "iteration": 97,
+      "temperature": 1.5845632502852955e-65,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.3429154999903403,
+      "iteration": 98,
+      "temperature": 3.1691265005705914e-66,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.3551952000125311,
+      "iteration": 99,
+      "temperature": 6.338253001141183e-67,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.367356100003235,
+      "iteration": 100,
+      "temperature": 1.2676506002282367e-67,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.3785747000365518,
+      "iteration": 101,
+      "temperature": 2.5353012004564735e-68,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.3913023000350222,
+      "iteration": 102,
+      "temperature": 5.070602400912948e-69,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.4031319000059739,
+      "iteration": 103,
+      "temperature": 1.0141204801825896e-69,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.4155177000211552,
+      "iteration": 104,
+      "temperature": 2.0282409603651794e-70,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.4270254000439309,
+      "iteration": 105,
+      "temperature": 4.056481920730359e-71,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.439296500000637,
+      "iteration": 106,
+      "temperature": 8.112963841460718e-72,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.4513022000319324,
+      "iteration": 107,
+      "temperature": 1.6225927682921438e-72,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.4639377000276,
+      "iteration": 108,
+      "temperature": 3.245185536584288e-73,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.4760574999963865,
+      "iteration": 109,
+      "temperature": 6.490371073168576e-74,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.489216200017836,
+      "iteration": 110,
+      "temperature": 1.2980742146337152e-74,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5003558000316843,
+      "iteration": 111,
+      "temperature": 2.5961484292674306e-75,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5111891000415199,
+      "iteration": 112,
+      "temperature": 5.1922968585348613e-76,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5221409000223503,
+      "iteration": 113,
+      "temperature": 1.0384593717069723e-76,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5332663000444882,
+      "iteration": 114,
+      "temperature": 2.0769187434139447e-77,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5460180999943987,
+      "iteration": 115,
+      "temperature": 4.1538374868278897e-78,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5585698999930173,
+      "iteration": 116,
+      "temperature": 8.30767497365578e-79,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5704136000131257,
+      "iteration": 117,
+      "temperature": 1.6615349947311563e-79,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5810289999935776,
+      "iteration": 118,
+      "temperature": 3.3230699894623127e-80,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5899628000333905,
+      "iteration": 119,
+      "temperature": 6.646139978924626e-81,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.5990303000435233,
+      "iteration": 120,
+      "temperature": 1.3292279957849253e-81,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.6075081000453793,
+      "iteration": 121,
+      "temperature": 2.6584559915698504e-82,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.6163244000053965,
+      "iteration": 122,
+      "temperature": 5.316911983139701e-83,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.6251115000341088,
+      "iteration": 123,
+      "temperature": 1.0633823966279402e-83,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.6364993000170216,
+      "iteration": 124,
+      "temperature": 2.1267647932558804e-84,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.6484771000104956,
+      "iteration": 125,
+      "temperature": 4.2535295865117613e-85,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.661892500007525,
+      "iteration": 126,
+      "temperature": 8.507059173023524e-86,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.674899000034202,
+      "iteration": 127,
+      "temperature": 1.7014118346047047e-86,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.688337900035549,
+      "iteration": 128,
+      "temperature": 3.4028236692094097e-87,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.7026796000427566,
+      "iteration": 129,
+      "temperature": 6.80564733841882e-88,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.717152299999725,
+      "iteration": 130,
+      "temperature": 1.3611294676837642e-88,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.73048430000199,
+      "iteration": 131,
+      "temperature": 2.7222589353675284e-89,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.7437045000260696,
+      "iteration": 132,
+      "temperature": 5.444517870735057e-90,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.756792200030759,
+      "iteration": 133,
+      "temperature": 1.0889035741470115e-90,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.7705291000311263,
+      "iteration": 134,
+      "temperature": 2.177807148294023e-91,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.7841723000165075,
+      "iteration": 135,
+      "temperature": 4.355614296588046e-92,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.7967559000244364,
+      "iteration": 136,
+      "temperature": 8.711228593176093e-93,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.8089322000159882,
+      "iteration": 137,
+      "temperature": 1.7422457186352188e-93,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.8218899000203237,
+      "iteration": 138,
+      "temperature": 3.4844914372704377e-94,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.835271499992814,
+      "iteration": 139,
+      "temperature": 6.968982874540876e-95,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.847926100017503,
+      "iteration": 140,
+      "temperature": 1.3937965749081752e-95,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.8603042000322603,
+      "iteration": 141,
+      "temperature": 2.7875931498163505e-96,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.8739032000303268,
+      "iteration": 142,
+      "temperature": 5.575186299632702e-97,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.8875242000212893,
+      "iteration": 143,
+      "temperature": 1.1150372599265404e-97,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.9008066999958828,
+      "iteration": 144,
+      "temperature": 2.230074519853081e-98,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.9122690000222065,
+      "iteration": 145,
+      "temperature": 4.460149039706162e-99,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.925799000018742,
+      "iteration": 146,
+      "temperature": 8.920298079412325e-100,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.939350500004366,
+      "iteration": 147,
+      "temperature": 1.784059615882465e-100,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.9539755000150762,
+      "iteration": 148,
+      "temperature": 3.5681192317649305e-101,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.9672787000308745,
+      "iteration": 149,
+      "temperature": 7.1362384635298615e-102,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.9796795000438578,
+      "iteration": 150,
+      "temperature": 1.4272476927059723e-102,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 1.993680100014899,
+      "iteration": 151,
+      "temperature": 2.854495385411945e-103,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.006928600021638,
+      "iteration": 152,
+      "temperature": 5.70899077082389e-104,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.0221752999932505,
+      "iteration": 153,
+      "temperature": 1.1417981541647781e-104,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.0370407000300474,
+      "iteration": 154,
+      "temperature": 2.2835963083295566e-105,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.0515711000189185,
+      "iteration": 155,
+      "temperature": 4.567192616659114e-106,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.0646410000044852,
+      "iteration": 156,
+      "temperature": 9.134385233318227e-107,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.0794963000225835,
+      "iteration": 157,
+      "temperature": 1.8268770466636455e-107,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.09458660002565,
+      "iteration": 158,
+      "temperature": 3.6537540933272914e-108,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.1090764999971725,
+      "iteration": 159,
+      "temperature": 7.307508186654583e-109,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.1229211000027135,
+      "iteration": 160,
+      "temperature": 1.4615016373309168e-109,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.135899899993092,
+      "iteration": 161,
+      "temperature": 2.923003274661834e-110,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.154681799991522,
+      "iteration": 162,
+      "temperature": 5.846006549323668e-111,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.1691743000410497,
+      "iteration": 163,
+      "temperature": 1.1692013098647336e-111,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.183469600044191,
+      "iteration": 164,
+      "temperature": 2.3384026197294674e-112,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.1962761000031605,
+      "iteration": 165,
+      "temperature": 4.6768052394589347e-113,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.209224499994889,
+      "iteration": 166,
+      "temperature": 9.35361047891787e-114,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.221973000036087,
+      "iteration": 167,
+      "temperature": 1.870722095783574e-114,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.2380144000053406,
+      "iteration": 168,
+      "temperature": 3.7414441915671485e-115,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.2508263000054285,
+      "iteration": 169,
+      "temperature": 7.482888383134298e-116,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.264292400039267,
+      "iteration": 170,
+      "temperature": 1.4965776766268595e-116,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.2767435000278056,
+      "iteration": 171,
+      "temperature": 2.9931553532537193e-117,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.291268900036812,
+      "iteration": 172,
+      "temperature": 5.986310706507439e-118,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.306436500046402,
+      "iteration": 173,
+      "temperature": 1.197262141301488e-118,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.320662300044205,
+      "iteration": 174,
+      "temperature": 2.394524282602976e-119,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.333885400032159,
+      "iteration": 175,
+      "temperature": 4.7890485652059524e-120,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.3458102000295185,
+      "iteration": 176,
+      "temperature": 9.578097130411906e-121,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.356986400031019,
+      "iteration": 177,
+      "temperature": 1.9156194260823813e-121,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.368358800013084,
+      "iteration": 178,
+      "temperature": 3.831238852164763e-122,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.3832648000097834,
+      "iteration": 179,
+      "temperature": 7.662477704329526e-123,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.3988764000241645,
+      "iteration": 180,
+      "temperature": 1.5324955408659052e-123,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.4136755000217818,
+      "iteration": 181,
+      "temperature": 3.0649910817318107e-124,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.4257947000442073,
+      "iteration": 182,
+      "temperature": 6.129982163463622e-125,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.440021999995224,
+      "iteration": 183,
+      "temperature": 1.2259964326927245e-125,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.4565177999902517,
+      "iteration": 184,
+      "temperature": 2.4519928653854492e-126,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.471391700033564,
+      "iteration": 185,
+      "temperature": 4.903985730770899e-127,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.483620700018946,
+      "iteration": 186,
+      "temperature": 9.807971461541797e-128,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.494855800003279,
+      "iteration": 187,
+      "temperature": 1.9615942923083596e-128,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.5085639000171795,
+      "iteration": 188,
+      "temperature": 3.9231885846167197e-129,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.5225498999934644,
+      "iteration": 189,
+      "temperature": 7.84637716923344e-130,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.5362061000196263,
+      "iteration": 190,
+      "temperature": 1.569275433846688e-130,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.551184700045269,
+      "iteration": 191,
+      "temperature": 3.1385508676933763e-131,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.5620514000183903,
+      "iteration": 192,
+      "temperature": 6.277101735386753e-132,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.573942299990449,
+      "iteration": 193,
+      "temperature": 1.2554203470773506e-132,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.5850716000422835,
+      "iteration": 194,
+      "temperature": 2.5108406941547013e-133,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.597925500012934,
+      "iteration": 195,
+      "temperature": 5.021681388309403e-134,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.6116719000274315,
+      "iteration": 196,
+      "temperature": 1.0043362776618806e-134,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.624388199998066,
+      "iteration": 197,
+      "temperature": 2.0086725553237614e-135,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.635839599999599,
+      "iteration": 198,
+      "temperature": 4.017345110647523e-136,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.6447636000229977,
+      "iteration": 199,
+      "temperature": 8.034690221295045e-137,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.6555069000460207,
+      "iteration": 200,
+      "temperature": 1.606938044259009e-137,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.6664992000442,
+      "iteration": 201,
+      "temperature": 3.2138760885180185e-138,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.6774028000072576,
+      "iteration": 202,
+      "temperature": 6.427752177036037e-139,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.689042000041809,
+      "iteration": 203,
+      "temperature": 1.2855504354072075e-139,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.701172100030817,
+      "iteration": 204,
+      "temperature": 2.571100870814415e-140,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.712564699992072,
+      "iteration": 205,
+      "temperature": 5.14220174162883e-141,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.7278367000399157,
+      "iteration": 206,
+      "temperature": 1.028440348325766e-141,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.7421746000181884,
+      "iteration": 207,
+      "temperature": 2.0568806966515323e-142,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.756932499993127,
+      "iteration": 208,
+      "temperature": 4.113761393303065e-143,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.770350300008431,
+      "iteration": 209,
+      "temperature": 8.227522786606131e-144,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.7854026000131853,
+      "iteration": 210,
+      "temperature": 1.645504557321226e-144,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.802078100037761,
+      "iteration": 211,
+      "temperature": 3.291009114642452e-145,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.8207995000411756,
+      "iteration": 212,
+      "temperature": 6.5820182292849045e-146,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.8393702000030316,
+      "iteration": 213,
+      "temperature": 1.316403645856981e-146,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.8528565000160597,
+      "iteration": 214,
+      "temperature": 2.632807291713962e-147,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.865084199991543,
+      "iteration": 215,
+      "temperature": 5.2656145834279244e-148,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.875156700029038,
+      "iteration": 216,
+      "temperature": 1.053122916685585e-148,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.884560100035742,
+      "iteration": 217,
+      "temperature": 2.10624583337117e-149,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.894147899991367,
+      "iteration": 218,
+      "temperature": 4.2124916667423403e-150,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.9034769000136293,
+      "iteration": 219,
+      "temperature": 8.424983333484681e-151,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.9128263000166044,
+      "iteration": 220,
+      "temperature": 1.684996666696936e-151,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.9282568999915384,
+      "iteration": 221,
+      "temperature": 3.3699933333938725e-152,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.9424734000349417,
+      "iteration": 222,
+      "temperature": 6.739986666787745e-153,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.9609509000438266,
+      "iteration": 223,
+      "temperature": 1.347997333357549e-153,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 2.981847800023388,
+      "iteration": 224,
+      "temperature": 2.695994666715098e-154,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.001446800015401,
+      "iteration": 225,
+      "temperature": 5.391989333430197e-155,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.0158007999998517,
+      "iteration": 226,
+      "temperature": 1.0783978666860394e-155,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.029857100045774,
+      "iteration": 227,
+      "temperature": 2.156795733372079e-156,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.038704200007487,
+      "iteration": 228,
+      "temperature": 4.313591466744158e-157,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.0482583999983035,
+      "iteration": 229,
+      "temperature": 8.627182933488316e-158,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.0570759000256658,
+      "iteration": 230,
+      "temperature": 1.7254365866976633e-158,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.0678222000133246,
+      "iteration": 231,
+      "temperature": 3.450873173395327e-159,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.075987600022927,
+      "iteration": 232,
+      "temperature": 6.901746346790654e-160,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.0868842999916524,
+      "iteration": 233,
+      "temperature": 1.3803492693581308e-160,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.1033073000144213,
+      "iteration": 234,
+      "temperature": 2.760698538716262e-161,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.1247872000094503,
+      "iteration": 235,
+      "temperature": 5.521397077432524e-162,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.1369242999935523,
+      "iteration": 236,
+      "temperature": 1.1042794154865048e-162,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.1485163000179455,
+      "iteration": 237,
+      "temperature": 2.20855883097301e-163,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.158977400045842,
+      "iteration": 238,
+      "temperature": 4.41711766194602e-164,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.1679757999954745,
+      "iteration": 239,
+      "temperature": 8.83423532389204e-165,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.182203100004699,
+      "iteration": 240,
+      "temperature": 1.766847064778408e-165,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.192477400007192,
+      "iteration": 241,
+      "temperature": 3.533694129556816e-166,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.20636030001333,
+      "iteration": 242,
+      "temperature": 7.067388259113633e-167,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.2177854999899864,
+      "iteration": 243,
+      "temperature": 1.4134776518227266e-167,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.2327460999949835,
+      "iteration": 244,
+      "temperature": 2.8269553036454534e-168,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.2499451999901794,
+      "iteration": 245,
+      "temperature": 5.653910607290907e-169,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.266704600013327,
+      "iteration": 246,
+      "temperature": 1.1307821214581816e-169,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.2809857000247575,
+      "iteration": 247,
+      "temperature": 2.2615642429163634e-170,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.2931982000009157,
+      "iteration": 248,
+      "temperature": 4.523128485832727e-171,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.3070921000326052,
+      "iteration": 249,
+      "temperature": 9.046256971665455e-172,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.3201784000266343,
+      "iteration": 250,
+      "temperature": 1.8092513943330912e-172,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.3314877999946475,
+      "iteration": 251,
+      "temperature": 3.618502788666183e-173,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.344199000042863,
+      "iteration": 252,
+      "temperature": 7.237005577332366e-174,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.3562848000437953,
+      "iteration": 253,
+      "temperature": 1.4474011154664732e-174,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.3707518000155687,
+      "iteration": 254,
+      "temperature": 2.8948022309329465e-175,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.3859265000210144,
+      "iteration": 255,
+      "temperature": 5.789604461865893e-176,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.401211299991701,
+      "iteration": 256,
+      "temperature": 1.1579208923731787e-176,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.4223584000137635,
+      "iteration": 257,
+      "temperature": 2.3158417847463575e-177,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.4414429000462405,
+      "iteration": 258,
+      "temperature": 4.631683569492715e-178,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.456100500014145,
+      "iteration": 259,
+      "temperature": 9.263367138985431e-179,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.4711787000414915,
+      "iteration": 260,
+      "temperature": 1.8526734277970865e-179,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.4859462000313215,
+      "iteration": 261,
+      "temperature": 3.7053468555941733e-180,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.499745300039649,
+      "iteration": 262,
+      "temperature": 7.410693711188347e-181,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.5115522000123747,
+      "iteration": 263,
+      "temperature": 1.4821387422376695e-181,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.525108200032264,
+      "iteration": 264,
+      "temperature": 2.964277484475339e-182,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.5434668000089005,
+      "iteration": 265,
+      "temperature": 5.928554968950679e-183,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.558035699999891,
+      "iteration": 266,
+      "temperature": 1.1857109937901358e-183,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.572152900043875,
+      "iteration": 267,
+      "temperature": 2.371421987580272e-184,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.5850963999982923,
+      "iteration": 268,
+      "temperature": 4.742843975160544e-185,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.5989025000017136,
+      "iteration": 269,
+      "temperature": 9.485687950321088e-186,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.611707000003662,
+      "iteration": 270,
+      "temperature": 1.8971375900642175e-186,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.624705200025346,
+      "iteration": 271,
+      "temperature": 3.794275180128435e-187,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.6374139999970794,
+      "iteration": 272,
+      "temperature": 7.588550360256871e-188,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.6566623999970034,
+      "iteration": 273,
+      "temperature": 1.5177100720513742e-188,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.672549800015986,
+      "iteration": 274,
+      "temperature": 3.0354201441027486e-189,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.685761700035073,
+      "iteration": 275,
+      "temperature": 6.070840288205498e-190,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.6987547000171617,
+      "iteration": 276,
+      "temperature": 1.2141680576410995e-190,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.711562800046522,
+      "iteration": 277,
+      "temperature": 2.428336115282199e-191,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.72640980000142,
+      "iteration": 278,
+      "temperature": 4.856672230564398e-192,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.739870899997186,
+      "iteration": 279,
+      "temperature": 9.713344461128796e-193,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.7521733000176027,
+      "iteration": 280,
+      "temperature": 1.9426688922257594e-193,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.7643882000120357,
+      "iteration": 281,
+      "temperature": 3.8853377844515193e-194,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.7771335000288673,
+      "iteration": 282,
+      "temperature": 7.770675568903038e-195,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.789914100023452,
+      "iteration": 283,
+      "temperature": 1.5541351137806077e-195,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.8041453000041656,
+      "iteration": 284,
+      "temperature": 3.1082702275612155e-196,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.8187559000216424,
+      "iteration": 285,
+      "temperature": 6.216540455122432e-197,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.830078000028152,
+      "iteration": 286,
+      "temperature": 1.2433080910244864e-197,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.8429824000340886,
+      "iteration": 287,
+      "temperature": 2.486616182048973e-198,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.855388000025414,
+      "iteration": 288,
+      "temperature": 4.973232364097947e-199,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.8673405000008643,
+      "iteration": 289,
+      "temperature": 9.946464728195893e-200,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.8824323000153527,
+      "iteration": 290,
+      "temperature": 1.9892929456391788e-200,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.894733300025109,
+      "iteration": 291,
+      "temperature": 3.978585891278358e-201,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.9122091000317596,
+      "iteration": 292,
+      "temperature": 7.957171782556716e-202,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.9242871000315063,
+      "iteration": 293,
+      "temperature": 1.5914343565113432e-202,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.9396836000378244,
+      "iteration": 294,
+      "temperature": 3.1828687130226865e-203,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.9525936000281945,
+      "iteration": 295,
+      "temperature": 6.3657374260453735e-204,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.963859000010416,
+      "iteration": 296,
+      "temperature": 1.2731474852090748e-204,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.975727800047025,
+      "iteration": 297,
+      "temperature": 2.5462949704181497e-205,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 3.9894559000385925,
+      "iteration": 298,
+      "temperature": 5.0925899408363e-206,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.001943800016306,
+      "iteration": 299,
+      "temperature": 1.0185179881672599e-206,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.015978100011125,
+      "iteration": 300,
+      "temperature": 2.03703597633452e-207,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.027948200004175,
+      "iteration": 301,
+      "temperature": 4.07407195266904e-208,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.04085660004057,
+      "iteration": 302,
+      "temperature": 8.14814390533808e-209,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.052278999995906,
+      "iteration": 303,
+      "temperature": 1.6296287810676162e-209,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.066284100001212,
+      "iteration": 304,
+      "temperature": 3.259257562135233e-210,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.075927100027911,
+      "iteration": 305,
+      "temperature": 6.518515124270466e-211,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.088305400044192,
+      "iteration": 306,
+      "temperature": 1.3037030248540932e-211,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.098594400042202,
+      "iteration": 307,
+      "temperature": 2.6074060497081864e-212,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.108923299994785,
+      "iteration": 308,
+      "temperature": 5.2148120994163734e-213,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.1217463000211865,
+      "iteration": 309,
+      "temperature": 1.0429624198832747e-213,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.134669099992607,
+      "iteration": 310,
+      "temperature": 2.0859248397665494e-214,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.149147000047378,
+      "iteration": 311,
+      "temperature": 4.1718496795330993e-215,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.159816200030036,
+      "iteration": 312,
+      "temperature": 8.3436993590662e-216,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.173742300015874,
+      "iteration": 313,
+      "temperature": 1.66873987181324e-216,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.184629500028677,
+      "iteration": 314,
+      "temperature": 3.3374797436264804e-217,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.195087100029923,
+      "iteration": 315,
+      "temperature": 6.674959487252961e-218,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.207915800041519,
+      "iteration": 316,
+      "temperature": 1.3349918974505923e-218,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.219285800005309,
+      "iteration": 317,
+      "temperature": 2.669983794901185e-219,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.233691700035706,
+      "iteration": 318,
+      "temperature": 5.33996758980237e-220,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.2454699000227265,
+      "iteration": 319,
+      "temperature": 1.067993517960474e-220,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.2566680000163615,
+      "iteration": 320,
+      "temperature": 2.135987035920948e-221,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.26958270004252,
+      "iteration": 321,
+      "temperature": 4.2719740718418966e-222,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.281656900013331,
+      "iteration": 322,
+      "temperature": 8.543948143683793e-223,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.292361800034996,
+      "iteration": 323,
+      "temperature": 1.7087896287367588e-223,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.308240799990017,
+      "iteration": 324,
+      "temperature": 3.4175792574735175e-224,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.323208599991631,
+      "iteration": 325,
+      "temperature": 6.835158514947036e-225,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.336759400030132,
+      "iteration": 326,
+      "temperature": 1.3670317029894073e-225,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.350770900025964,
+      "iteration": 327,
+      "temperature": 2.734063405978815e-226,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.360987299995031,
+      "iteration": 328,
+      "temperature": 5.46812681195763e-227,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.373731800005771,
+      "iteration": 329,
+      "temperature": 1.093625362391526e-227,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.384533900010865,
+      "iteration": 330,
+      "temperature": 2.187250724783052e-228,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.3970010000048205,
+      "iteration": 331,
+      "temperature": 4.374501449566104e-229,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.408208700013347,
+      "iteration": 332,
+      "temperature": 8.749002899132208e-230,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.421610800025519,
+      "iteration": 333,
+      "temperature": 1.7498005798264416e-230,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.434351700008847,
+      "iteration": 334,
+      "temperature": 3.499601159652884e-231,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.4443336999975145,
+      "iteration": 335,
+      "temperature": 6.999202319305768e-232,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.454252400028054,
+      "iteration": 336,
+      "temperature": 1.3998404638611536e-232,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.4664655000087805,
+      "iteration": 337,
+      "temperature": 2.799680927722307e-233,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.475990800012369,
+      "iteration": 338,
+      "temperature": 5.599361855444615e-234,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.49000089999754,
+      "iteration": 339,
+      "temperature": 1.1198723710889229e-234,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.501464000029955,
+      "iteration": 340,
+      "temperature": 2.2397447421778458e-235,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.513090700027533,
+      "iteration": 341,
+      "temperature": 4.479489484355692e-236,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.529446200001985,
+      "iteration": 342,
+      "temperature": 8.958978968711384e-237,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.5428694000002,
+      "iteration": 343,
+      "temperature": 1.791795793742277e-237,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.556381700036582,
+      "iteration": 344,
+      "temperature": 3.583591587484554e-238,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.572325400018599,
+      "iteration": 345,
+      "temperature": 7.1671831749691075e-239,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.5857490000198595,
+      "iteration": 346,
+      "temperature": 1.4334366349938216e-239,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.598033400019631,
+      "iteration": 347,
+      "temperature": 2.866873269987643e-240,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.61122250003973,
+      "iteration": 348,
+      "temperature": 5.7337465399752865e-241,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.623748300014995,
+      "iteration": 349,
+      "temperature": 1.1467493079950574e-241,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.641560600022785,
+      "iteration": 350,
+      "temperature": 2.2934986159901147e-242,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.659896400000434,
+      "iteration": 351,
+      "temperature": 4.58699723198023e-243,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.679152800003067,
+      "iteration": 352,
+      "temperature": 9.17399446396046e-244,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.696009300008882,
+      "iteration": 353,
+      "temperature": 1.834798892792092e-244,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.71328770002583,
+      "iteration": 354,
+      "temperature": 3.669597785584184e-245,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.7315077999955975,
+      "iteration": 355,
+      "temperature": 7.339195571168369e-246,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.747815900016576,
+      "iteration": 356,
+      "temperature": 1.467839114233674e-246,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.773758299998008,
+      "iteration": 357,
+      "temperature": 2.935678228467348e-247,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.786857400031295,
+      "iteration": 358,
+      "temperature": 5.871356456934696e-248,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.800246600003447,
+      "iteration": 359,
+      "temperature": 1.1742712913869393e-248,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.814368900028057,
+      "iteration": 360,
+      "temperature": 2.348542582773879e-249,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.826677000033669,
+      "iteration": 361,
+      "temperature": 4.697085165547758e-250,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.839855200028978,
+      "iteration": 362,
+      "temperature": 9.394170331095516e-251,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.850106700032484,
+      "iteration": 363,
+      "temperature": 1.8788340662191034e-251,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.861697699991055,
+      "iteration": 364,
+      "temperature": 3.757668132438207e-252,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.873025200038683,
+      "iteration": 365,
+      "temperature": 7.515336264876415e-253,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.883020800014492,
+      "iteration": 366,
+      "temperature": 1.503067252975283e-253,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.897371500032023,
+      "iteration": 367,
+      "temperature": 3.006134505950566e-254,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.911653299990576,
+      "iteration": 368,
+      "temperature": 6.012269011901132e-255,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.9272711999947205,
+      "iteration": 369,
+      "temperature": 1.2024538023802265e-255,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.939368000021204,
+      "iteration": 370,
+      "temperature": 2.4049076047604532e-256,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.951300100015942,
+      "iteration": 371,
+      "temperature": 4.809815209520907e-257,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.962258999992628,
+      "iteration": 372,
+      "temperature": 9.619630419041814e-258,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.973087300022598,
+      "iteration": 373,
+      "temperature": 1.923926083808363e-258,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.985474899993278,
+      "iteration": 374,
+      "temperature": 3.847852167616726e-259,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 4.999104200047441,
+      "iteration": 375,
+      "temperature": 7.695704335233452e-260,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.010897500033025,
+      "iteration": 376,
+      "temperature": 1.5391408670466904e-260,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.024143900023773,
+      "iteration": 377,
+      "temperature": 3.078281734093381e-261,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.03828550002072,
+      "iteration": 378,
+      "temperature": 6.156563468186763e-262,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.050332200014964,
+      "iteration": 379,
+      "temperature": 1.2313126936373526e-262,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.061644000001252,
+      "iteration": 380,
+      "temperature": 2.4626253872747054e-263,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.071559800009709,
+      "iteration": 381,
+      "temperature": 4.925250774549411e-264,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.083687000034843,
+      "iteration": 382,
+      "temperature": 9.850501549098823e-265,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.096633300010581,
+      "iteration": 383,
+      "temperature": 1.9701003098197647e-265,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.107514700037427,
+      "iteration": 384,
+      "temperature": 3.94020061963953e-266,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.11650380003266,
+      "iteration": 385,
+      "temperature": 7.88040123927906e-267,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.1363066000049,
+      "iteration": 386,
+      "temperature": 1.576080247855812e-267,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.154874800005928,
+      "iteration": 387,
+      "temperature": 3.1521604957116245e-268,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.170052300032694,
+      "iteration": 388,
+      "temperature": 6.304320991423249e-269,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.181615800014697,
+      "iteration": 389,
+      "temperature": 1.2608641982846499e-269,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.192736600001808,
+      "iteration": 390,
+      "temperature": 2.5217283965693e-270,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.203799500013702,
+      "iteration": 391,
+      "temperature": 5.043456793138601e-271,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.21661210001912,
+      "iteration": 392,
+      "temperature": 1.0086913586277202e-271,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.2275775000452995,
+      "iteration": 393,
+      "temperature": 2.0173827172554406e-272,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.237907800008543,
+      "iteration": 394,
+      "temperature": 4.034765434510881e-273,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.248936199990567,
+      "iteration": 395,
+      "temperature": 8.069530869021763e-274,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.262009400001261,
+      "iteration": 396,
+      "temperature": 1.6139061738043526e-274,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.274659499991685,
+      "iteration": 397,
+      "temperature": 3.2278123476087057e-275,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.287079000030644,
+      "iteration": 398,
+      "temperature": 6.455624695217412e-276,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.304212000046391,
+      "iteration": 399,
+      "temperature": 1.2911249390434825e-276,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.321726800000761,
+      "iteration": 400,
+      "temperature": 2.582249878086965e-277,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.333165000018198,
+      "iteration": 401,
+      "temperature": 5.1644997561739305e-278,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.345686900021974,
+      "iteration": 402,
+      "temperature": 1.0328999512347861e-278,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.3548061000183225,
+      "iteration": 403,
+      "temperature": 2.065799902469572e-279,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.364047700015362,
+      "iteration": 404,
+      "temperature": 4.1315998049391445e-280,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.377155099995434,
+      "iteration": 405,
+      "temperature": 8.263199609878289e-281,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.389067200012505,
+      "iteration": 406,
+      "temperature": 1.6526399219756578e-281,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.400976900011301,
+      "iteration": 407,
+      "temperature": 3.3052798439513158e-282,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.42554750002455,
+      "iteration": 408,
+      "temperature": 6.610559687902632e-283,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.447951300011482,
+      "iteration": 409,
+      "temperature": 1.3221119375805266e-283,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.463486100023147,
+      "iteration": 410,
+      "temperature": 2.6442238751610534e-284,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.473682800016832,
+      "iteration": 411,
+      "temperature": 5.288447750322107e-285,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.483043799991719,
+      "iteration": 412,
+      "temperature": 1.0576895500644215e-285,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.4932168000377715,
+      "iteration": 413,
+      "temperature": 2.115379100128843e-286,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.506614300014917,
+      "iteration": 414,
+      "temperature": 4.2307582002576863e-287,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.521782400028314,
+      "iteration": 415,
+      "temperature": 8.461516400515374e-288,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.538174000044819,
+      "iteration": 416,
+      "temperature": 1.6923032801030748e-288,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.553189300000668,
+      "iteration": 417,
+      "temperature": 3.3846065602061496e-289,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.564027699991129,
+      "iteration": 418,
+      "temperature": 6.7692131204123e-290,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.574424099992029,
+      "iteration": 419,
+      "temperature": 1.3538426240824602e-290,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.582460900011938,
+      "iteration": 420,
+      "temperature": 2.7076852481649204e-291,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.592143000045326,
+      "iteration": 421,
+      "temperature": 5.415370496329841e-292,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.604178600013256,
+      "iteration": 422,
+      "temperature": 1.0830740992659683e-292,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.613243700005114,
+      "iteration": 423,
+      "temperature": 2.1661481985319367e-293,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.623492999991868,
+      "iteration": 424,
+      "temperature": 4.3322963970638735e-294,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.631863699993119,
+      "iteration": 425,
+      "temperature": 8.664592794127748e-295,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.639731200004462,
+      "iteration": 426,
+      "temperature": 1.7329185588255497e-295,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.651042700046673,
+      "iteration": 427,
+      "temperature": 3.4658371176511e-296,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.6596168000251055,
+      "iteration": 428,
+      "temperature": 6.9316742353022e-297,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.671059100015555,
+      "iteration": 429,
+      "temperature": 1.3863348470604401e-297,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.682073700008914,
+      "iteration": 430,
+      "temperature": 2.7726696941208805e-298,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.691727700002957,
+      "iteration": 431,
+      "temperature": 5.545339388241761e-299,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.707351599994581,
+      "iteration": 432,
+      "temperature": 1.1090678776483522e-299,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.72206100000767,
+      "iteration": 433,
+      "temperature": 2.2181357552967046e-300,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.741552599996794,
+      "iteration": 434,
+      "temperature": 4.436271510593409e-301,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.758239799994044,
+      "iteration": 435,
+      "temperature": 8.872543021186819e-302,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.770900700008497,
+      "iteration": 436,
+      "temperature": 1.774508604237364e-302,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.779867600009311,
+      "iteration": 437,
+      "temperature": 3.549017208474728e-303,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.78925580001669,
+      "iteration": 438,
+      "temperature": 7.098034416949456e-304,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.801424600009341,
+      "iteration": 439,
+      "temperature": 1.4196068833898913e-304,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.815150700043887,
+      "iteration": 440,
+      "temperature": 2.8392137667797826e-305,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.830234799999744,
+      "iteration": 441,
+      "temperature": 5.6784275335595655e-306,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.842492900032084,
+      "iteration": 442,
+      "temperature": 1.1356855067119131e-306,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.857551400025841,
+      "iteration": 443,
+      "temperature": 2.2713710134238265e-307,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.8718514000065625,
+      "iteration": 444,
+      "temperature": 4.542742026847653e-308,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.882170099997893,
+      "iteration": 445,
+      "temperature": 9.08548405369531e-309,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.900419800018426,
+      "iteration": 446,
+      "temperature": 1.817096810739063e-309,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.916101000038907,
+      "iteration": 447,
+      "temperature": 3.63419362147813e-310,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.933572000009008,
+      "iteration": 448,
+      "temperature": 7.2683872429565e-311,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.951951500028372,
+      "iteration": 449,
+      "temperature": 1.4536774485913e-311,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.965325299999677,
+      "iteration": 450,
+      "temperature": 2.907354897184e-312,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.974772399989888,
+      "iteration": 451,
+      "temperature": 5.8147097944e-313,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 5.984224700019695,
+      "iteration": 452,
+      "temperature": 1.16294195887e-313,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.002987699990626,
+      "iteration": 453,
+      "temperature": 2.325883918e-314,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.017969000036828,
+      "iteration": 454,
+      "temperature": 4.651767837e-315,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.033684800029732,
+      "iteration": 455,
+      "temperature": 9.30353565e-316,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.045861000020523,
+      "iteration": 456,
+      "temperature": 1.86070715e-316,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.05625650001457,
+      "iteration": 457,
+      "temperature": 3.721414e-317,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.069315700035077,
+      "iteration": 458,
+      "temperature": 7.442827e-318,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.081410000042524,
+      "iteration": 459,
+      "temperature": 1.488565e-318,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.09319810004672,
+      "iteration": 460,
+      "temperature": 2.97714e-319,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 72,
+      "time": 6.1047823000117205,
+      "iteration": 461,
+      "temperature": 5.9545e-320,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 99,
+      "time": 6.115677100024186,
+      "iteration": 462,
+      "temperature": 1.1907e-320,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 99,
+      "time": 6.124324200034607,
+      "iteration": 463,
+      "temperature": 2.38e-321,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 99,
+      "time": 6.13553700002376,
+      "iteration": 464,
+      "temperature": 4.74e-322,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 99,
+      "time": 6.143504900042899,
+      "iteration": 465,
+      "temperature": 9.4e-323,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 99,
+      "time": 6.160093400045298,
+      "iteration": 466,
+      "temperature": 2e-323,
+      "initial temperature": 1000
+    },
+    {
+      "evaluation": 99,
+      "time": 6.171900900022592,
+      "iteration": 467,
+      "temperature": 5e-324,
+      "initial temperature": 1000
+    }
+  ]
+}

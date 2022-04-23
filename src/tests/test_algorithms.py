@@ -12,9 +12,10 @@ class TestAlgorithms(unittest.TestCase):
 
     def callback(self, solution):
         print('got solution')
+
     def test_simulated_annealing(self):
-        simulated_annealing = SimulatedAnnealing(self.solution)
-        solution = simulated_annealing.execute(self.callback,f'simulated_annealing_1000_01.json')
+        simulated_annealing = SimulatedAnnealing(self.solution, 10000, 1000, 0.75)
+        solution = simulated_annealing.execute(self.callback,f'simulated_annealing_1000_75.json')
         print("Sim\n",solution, "Eval: ",solution.evaluation, " Time: ",solution.time)
 
     """     def test_genetic(self):
