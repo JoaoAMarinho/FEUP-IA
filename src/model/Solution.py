@@ -2,6 +2,9 @@ from functools import reduce
 from math import inf
 
 class Solution:
+    """
+    Solution class model
+    """
     def __init__(self, rows=[], servers=[], pools=1):
         self.rows = rows
         self.servers = servers

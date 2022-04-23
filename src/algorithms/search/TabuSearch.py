@@ -19,7 +19,7 @@ class TabuSearch(Algorithm):
 
         self.open_file(file)
         solution.time = perf_counter() - start
-        self.write_to_file(file, solution)
+        self.write_to_file(file, solution, iteration)
         
         while not self.stop(iteration, iteration_no_imp):
             iteration += 1
@@ -32,11 +32,11 @@ class TabuSearch(Algorithm):
             if key not in self.tabu_memory:
               if new_solution.evaluation > best_solution:
                 new_solution.time = perf_counter() - start
-                self.write_to_file(file, new_solution)
                 solution = new_solution
                 best_solution = new_solution.evaluation
                 self.tabu_memory[key] = solution
                 self.tabu_memory[key].tenure = self.tabu_tenure
+              self.write_to_file(file, solution, iteration)
             else:
               tenure = self.tabu_memory[key].tenure
               if tenure == 0: self.tabu_memory.pop(key)
