@@ -12,15 +12,15 @@ class TestAlgorithms(unittest.TestCase):
 
     def callback(self, solution):
         print('got solution')
-    """     def test_simulated_annealing(self):
+    def test_simulated_annealing(self):
         simulated_annealing = SimulatedAnnealing(self.solution)
-        solution = simulated_annealing.execute(self.callback,f'simulated_annealing_{self.i}.json')
+        solution = simulated_annealing.execute(self.callback,f'simulated_annealing_1000_01.json')
         print("Sim\n",solution, "Eval: ",solution.evaluation, " Time: ",solution.time)
-     """
-    def test_genetic(self):
+
+    """     def test_genetic(self):
         genetics = GeneticAlgorithm(self.solution)
         solution = genetics.execute(self.callback, f'genetic_{self.i}.json')
-        print("Tabu\n", solution, "Eval ", solution.evaluation)
+        print("Tabu\n", solution, "Eval ", solution.evaluation) """
 
     """     def test_hill_climbing(self):
         solution = self.data_center.initial_solution()
