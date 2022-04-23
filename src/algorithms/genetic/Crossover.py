@@ -17,10 +17,10 @@ class ServersCrossover(CrossoverMethod):
 
     def run(self, parent1, parent2):
         """
-        Runs the one point crossover
+        Runs the server crossover
         ...
         Returns:
-            The newly generated offspring(s)
+            The newly generated offsprings
         """
         
         offspring1, offspring2 = deepcopy(parent1), deepcopy(parent2)
@@ -35,11 +35,11 @@ class ServersCrossover(CrossoverMethod):
             
             # if server is allocated
             if server1.pool != -1:
-                rows1.unset_server(server1)
+                rows1[server1.row].unset_server(server1)
                 server1.unset()
             
             if server2.pool != -1:
-                rows2.unset_server(server2)
+                rows2[server2.row].unset_server(server2)
                 server2.unset()
         
         # try to allocate new right half of servers
@@ -68,10 +68,10 @@ class PoolsCrossover(CrossoverMethod):
 
     def run(self, parent1, parent2):
         """
-        Runs the recombination crossover
+        Runs the pools crossover
         ...
         Returns:
-            The newly generated offspring(s)
+            The newly generated offsprings
         """
 
         offspring1, offspring2 = deepcopy(parent1), deepcopy(parent2)

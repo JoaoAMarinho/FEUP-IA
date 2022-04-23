@@ -1,4 +1,8 @@
 class Server:
+    """
+    Server class model
+    """
+
     def __init__(self, id, size, capacity):
         self.id = id
         self.size = size

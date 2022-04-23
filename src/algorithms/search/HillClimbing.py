@@ -14,7 +14,7 @@ class HillClimbing(Algorithm):
 
         self.open_file(file)
         solution.time = perf_counter() - start
-        self.write_to_file(file, solution)
+        self.write_to_file(file, solution, iteration)
 
         
         while not self.stop(iteration, iteration_no_imp):
@@ -26,10 +26,10 @@ class HillClimbing(Algorithm):
 
             if (neighbour_evaluation > evaluation): 
                 neighbour.time = perf_counter() - start
-                self.write_to_file(file, neighbour)
                 solution = neighbour
                 evaluation = neighbour_evaluation
                 iteration_no_imp = 0
+            self.write_to_file(file,solution, iteration)
 
         elapsed = perf_counter() - start
         solution.time = elapsed

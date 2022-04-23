@@ -1,4 +1,8 @@
 class Row:
+    """
+    Row class model
+    """
+
     def __init__(self, slots):
         self.max_available_slots = slots
         self.slots = [-1 for _ in range(slots)]

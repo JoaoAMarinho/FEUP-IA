@@ -82,7 +82,7 @@ class Algorithm(ABC):
         if (slot:=new_row.allocate_server(server)) == -1: return solution
         
         server.set_position(slot, new_row_idx)
-        server.set_pool(randint(0, pools - 1))
+        server.pool = randint(0, pools - 1)
 
         new_solution.evaluate()
         return new_solution
@@ -109,12 +109,13 @@ class Algorithm(ABC):
         to_deallocate = allocated[randint(0, len(allocated) - 1)]
         to_allocate = deallocated[randint(0, len(deallocated) - 1)]
 
+
         row = rows[to_deallocate.row]
         row.unset_server(to_deallocate)
 
         if row.allocate_server_to_slot(to_allocate, to_deallocate.slot): 
             to_allocate.set_position(to_deallocate.slot, to_deallocate.row)
-            to_allocate.set_pool(to_deallocate.pool)
+            to_allocate.pool = to_deallocate.pool
             to_deallocate.unset()
             new_solution.evaluate()
             return new_solution
@@ -155,7 +156,6 @@ class Algorithm(ABC):
         """
         Obtains neighbour solution by applying one of the available strategies
         """
-    
         operators = [self.change_pool, 
                      self.change_row, 
                      self.allocate_server,
@@ -193,10 +193,10 @@ class Algorithm(ABC):
         with open(file, 'w') as outfile:
             outfile.write('{"data": [\n')
 
-    def write_to_file(self, file,solution):
-        data = {'rows': solution.rows.__str__(),
-                'evaluation': solution.evaluation,
-                'time': solution.time}
+    def write_to_file(self, file,solution, iteration):
+        data = {'evaluation': solution.evaluation,
+                'time': solution.time,
+                'iteration': iteration}
 
         with open(file, 'a') as outfile:
             outfile.write(json.dumps(data)+',\n')

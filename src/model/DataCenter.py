@@ -5,6 +5,10 @@ from random import randint
 
 
 class DataCenter:
+    """
+    Data Center class model
+    """
+
     def __init__(self, filename='input.txt'):
         self.rows = []
         self.servers = []
@@ -39,7 +43,7 @@ class DataCenter:
                 if slot == -1: continue
 
                 server.set_position(slot, row_idx)
-                server.set_pool(randint(0, self.pools-1))
+                server.pool = randint(0, self.pools-1)
                 break
         
         return Solution(self.rows, self.servers, self.pools)
