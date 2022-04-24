@@ -8,6 +8,13 @@ class TabuSearch(Algorithm):
 		self.tabu_memory = {}  
 
 	def execute(self, callback):
+		"""
+        Runs the Tabu Search algorithm
+        ...
+        Returns:
+            The best solution found
+        """
+
 		start = perf_counter()
 
 		iteration = 0

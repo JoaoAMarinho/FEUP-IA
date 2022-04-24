@@ -18,13 +18,22 @@ class Server:
         return self.__str__()
 
     def set_pool(self, pool):
+        """
+        Pool setter method
+        """
         self.pool = pool
 
     def set_position(self, slot, row):
+        """
+        Position setter method, slot and row values
+        """
         self.slot = slot
         self.row = row
 
     def unset(self):
+        """
+        Reset the position and pool values back to -1
+        """
         self.slot = -1
         self.row = -1
         self.pool = -1

@@ -10,9 +10,23 @@ class SimulatedAnnealing(Algorithm):
         self.temp_decrease_factor = temperature_decrease_factor
 
     def schedule_temperature(self, t):
+        """
+        Decreases the temperature according to the decrease factor
+        ...
+        Returns:
+            New temperature value
+        """
+        
         return t * self.temp_decrease_factor
 
     def execute(self, callback):
+        """
+        Runs the Simulated Annealing algorithm
+        ...
+        Returns:
+            The best solution found
+        """
+
         start = perf_counter()
         iteration = 0
         iteration_no_imp = 0

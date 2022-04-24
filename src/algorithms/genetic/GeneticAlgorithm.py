@@ -1,4 +1,3 @@
-from copy import deepcopy
 from random import randint, uniform
 
 from algorithms.Algorithm import *
@@ -86,7 +85,7 @@ class GeneticAlgorithm(Algorithm):
     def execute(self, callback):
 
         """
-        Runs the genetic algorithm
+        Runs the Genetic algorithm
         ...
         Returns:
             The best chromosome solution

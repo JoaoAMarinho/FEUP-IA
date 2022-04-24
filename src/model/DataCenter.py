@@ -16,6 +16,10 @@ class DataCenter:
         self.solution = self.initial_solution()
 
     def parse_file(self, filename):
+        """
+        Parses an input file with the data server information
+        """
+        
         file = open(f'src/inputs/{filename}', 'r')
         rows, slots, unavailable, self.pools, servers = (
             map(int, file.readline().strip().split()))
@@ -35,6 +39,12 @@ class DataCenter:
         file.close()
 
     def initial_solution(self):
+        """
+        Creates a solution by trying to allocate all servers in order
+        ...
+        Returns:
+            The solution created
+        """
         for server in self.servers:
             for row_idx, row in enumerate(self.rows):
                 slot = row.allocate_server(server)

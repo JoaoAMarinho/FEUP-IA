@@ -6,6 +6,13 @@ class HillClimbing(Algorithm):
         super().__init__(initial_solution, max_iterations, max_iterations_no_imp)
 
     def execute(self, callback):
+        """
+        Runs the Hill Climbing algorithm
+        ...
+        Returns:
+            The best solution found
+        """
+
         start = perf_counter()
         iteration = 0
         iteration_no_imp = 0

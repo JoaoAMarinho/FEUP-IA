@@ -34,6 +34,9 @@ class Solution:
         return reduce(lambda hash, s2: hash * abs(s2.id + s2.row + s2.pool + s2.slot), self.servers, 0)
 
     def evaluate(self):
+        """
+        Updates the evaluation of the current solution state
+        """
         guaranteed_capacity = [0 for _ in range(self.pools)]
         max_row_capacity = [0 for _ in range(self.pools)]
 

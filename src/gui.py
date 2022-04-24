@@ -388,6 +388,7 @@ class SolutionMenu(Menu):
             return
 
         pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_ARROW)
-
-        if self.mainMenuButton.collidepoint(event.pos):
-            pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
+        
+        if hasattr(self, 'mainMenuButton'):
+            if self.mainMenuButton.collidepoint(event.pos):
+                pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)

@@ -14,20 +14,36 @@ class Row:
         return self.__str__()
 
     def set_unavailable(self, slot):
+        """
+        Sets the specified slot to an unavailable state, and recalculates the maximum number of consecutive slots
+        """
         self.slots[slot] = -2
         self.calculate_slots()
 
     def set_server(self, slot, server):
+        """
+        Fills the slots with the server id starting from 'slot', and recalculates the maximum number of consecutive slots
+        """
         for i in range(server.size):
             self.slots[slot + i] = server.id
         self.calculate_slots()
 
     def unset_server(self, server):
+        """
+        Empties the slots which are occupied by the server, and recalculates the maximum number of consecutive slots
+        """
         for i in range(server.size):
             self.slots[server.slot + i] = -1
         self.calculate_slots()
 
     def allocate_server(self, server):
+        """
+        Tries to allocate the server in the row
+        ...
+        Returns:
+            Slot number in case the server is allocated
+            -1 otherwise
+        """
         n_slots = len(self.slots)
 
         if server.size > self.max_available_slots:
@@ -42,6 +58,13 @@ class Row:
         return -1
 
     def allocate_server_to_slot(self, server, slot):
+        """
+        Tries to allocate the server in the row in a given slot
+        ...
+        Returns:
+            True in case the server is successfully allocated
+            False otherwise
+        """
         if server.size > self.max_available_slots: 
             return False
         
@@ -55,6 +78,9 @@ class Row:
 
 
     def calculate_slots(self):
+        """
+        Calculates the maximum number of consecutive slots
+        """
         available_slots = 0
         max_available_slots = 0
 

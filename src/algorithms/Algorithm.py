@@ -15,6 +15,14 @@ class Algorithm(ABC):
         pass
 
     def stop(self, iteration, iteration_no_imp):
+        """
+        Checks if stop criteria has been met
+        ...
+        Returns:
+            True in case the algorithm fulfills the stop criteria
+            False otherwise
+        """
+
         return iteration >= self.max_iterations or iteration_no_imp >= self.max_iterations_no_imp
     
     def change_pool(self, solution):
@@ -169,7 +177,7 @@ class Algorithm(ABC):
     
     def neighbour_solutions(self, solution):
         """
-        Obtains neighbour solution by applying one of the available strategies
+        Obtains all neighbour solutions by applying all of the available strategies
         """
 
         operators = [self.change_pool, 
@@ -187,7 +195,16 @@ class Algorithm(ABC):
         return solutions
 
     def get_best_solution(self, solution):
+        """
+        Finds the solution with the best evaluation from the solution array
+        ...
+        Returns:
+            The best solution from the array
+        """
         return max(solution, key= lambda sol: sol.evaluation)
 
     def set_initial_solution(self, initial_solution):
+        """
+        Setter method for the initial_solution
+        """
         self.initial_solution = initial_solution
