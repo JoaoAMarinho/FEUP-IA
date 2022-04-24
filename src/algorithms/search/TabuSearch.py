@@ -40,6 +40,7 @@ class TabuSearch(Algorithm):
 					else: self.tabu_memory[key].tenure = tenure - 1
 
 			if new_solution.evaluation > best_solution:
+				iteration_no_imp = 0
 				solution = new_solution
 				best_solution = new_solution.evaluation
 
