@@ -25,10 +25,10 @@ class HillClimbing(Algorithm):
             neighbour_evaluation = neighbour.evaluation
 
             if (neighbour_evaluation > evaluation): 
-                neighbour.time = perf_counter() - start
                 solution = neighbour
                 evaluation = neighbour_evaluation
                 iteration_no_imp = 0
+            solution.time = perf_counter() - start
             self.write_to_file(file,solution, iteration)
 
         elapsed = perf_counter() - start

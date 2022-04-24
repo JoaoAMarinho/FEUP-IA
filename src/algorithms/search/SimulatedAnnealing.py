@@ -51,12 +51,13 @@ class SimulatedAnnealing(Algorithm):
             delta_evaluation = neighbour_evaluation - evaluation
 
             if delta_evaluation > 0 or random.uniform(0.0, 1.0) <= exp(delta_evaluation/temperature):
-                neighbour.time = perf_counter() - start
                 neighbour.temp = temperature
                 neighbour.initial_temp = self.initial_temp
                 solution = neighbour
                 evaluation = neighbour_evaluation
                 iteration_no_imp = 0
+
+            solution.time = perf_counter() - start
             self.write_to_file(file, solution, iteration)
 
         elapsed = perf_counter() - start

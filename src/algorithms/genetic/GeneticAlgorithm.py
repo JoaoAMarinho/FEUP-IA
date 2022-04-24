@@ -14,9 +14,10 @@ class GeneticAlgorithm(Algorithm):
                  population_size=30,
                  mutation_threshold=0.2,
                  selection_method=TournamentSelection(),
-                 crossover_method=ServersCrossover()):
+                 crossover_method=PoolsCrossover()):
 
         super().__init__(max_iterations, max_iterations_no_imp)
+        self.max_iterations_no_imp = 1000
         self.population_size = population_size
         self.initial_solution = initial_solution
         self.mutation_threshold = mutation_threshold
@@ -126,10 +127,9 @@ class GeneticAlgorithm(Algorithm):
             new_fittest = self.fittest_chromosome(new_population)
 
             if new_fittest.evaluation > fittest.evaluation:
-                   new_fittest.time = perf_counter() - start
-
                    fittest = new_fittest
                    iteration_no_imp = 0
+            fittest.time = perf_counter() - start       
             self.write_to_file(file,fittest, iteration)
 
         elapsed = perf_counter() - start
