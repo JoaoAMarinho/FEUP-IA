@@ -6,8 +6,8 @@ import json
 
 class Algorithm(ABC):
     def __init__(self, initial_solution, max_iterations=10000, max_iterations_no_imp=1000):
-        self.max_iterations = max_iterations
-        self.max_iterations_no_imp = max_iterations_no_imp
+        self.max_iterations_no_imp = 1000
+        self.max_iterations = 10000
         self.initial_solution = initial_solution
 
     @abstractmethod

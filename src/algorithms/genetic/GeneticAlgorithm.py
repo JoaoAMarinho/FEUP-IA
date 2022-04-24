@@ -18,6 +18,7 @@ class GeneticAlgorithm(Algorithm):
 
         super().__init__(max_iterations, max_iterations_no_imp)
         self.max_iterations_no_imp = 1000
+        self.max_iterations = 10000
         self.population_size = population_size
         self.initial_solution = initial_solution
         self.mutation_threshold = mutation_threshold

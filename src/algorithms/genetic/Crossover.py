@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from copy import deepcopy
+from random import randint
 
 
 class CrossoverMethod(ABC):
@@ -29,10 +30,25 @@ class ServersCrossover(CrossoverMethod):
 
         crossover_point = len(servers1) // 2
 
-        # deallocate right half of servers
-        for idx in range(crossover_point, len(servers1)):
+        firsts1 = []
+        seconds1 = []
+        firsts2 = []
+        seconds2 = []
+
+        ''' 
+            deallocate servers
+            servers allocated first are inserted in firsts array
+            servers allocated last are inserted in seconds array
+            crossover point is the index that defines the barrier between firsts and lasts
+        '''
+        for idx in range(0, len(servers1)):
             server1, server2 = servers1[idx], servers2[idx]
-            
+            if idx < crossover_point:
+                firsts1.append(server1)
+                firsts2.append(server2)
+            else:
+               seconds1.append(server1)
+               seconds2.append(server2)
             # if server is allocated
             if server1.pool != -1:
                 rows1[server1.row].unset_server(server1)
@@ -41,23 +57,45 @@ class ServersCrossover(CrossoverMethod):
             if server2.pool != -1:
                 rows2[server2.row].unset_server(server2)
                 server2.unset()
+            
         
-        # try to allocate new right half of servers
-        for idx in range(crossover_point, len(servers1)):
-            server1, server2 = servers1[idx], servers2[idx]
-            initial_server1, initial_server2 = parent1.servers[idx], parent2.servers[idx]
+        # try to allocate seconds
+        for idx in range(0, len(seconds1)):
+            server1, server2 = seconds1[idx], seconds2[idx]
+            for row_idx in range(len(rows1)):
+                slot = rows1[row_idx].allocate_server(server1)
 
-            if initial_server1.pool != -1:
-                row, slot = initial_server1.row, initial_server1.slot
-                if rows2[row].allocate_server_to_slot(server2, slot):
-                    server2.set_position(slot, row)
-                    server2.set_pool = initial_server1.pool
+                # impossible to allocate in row
+                if slot == -1: continue
 
-            if initial_server2.pool != -1:
-                row, slot = initial_server2.row, initial_server2.slot
-                if rows1[row].allocate_server_to_slot(server1, slot):
-                    server1.set_position(slot, row)
-                    server1.set_pool = initial_server2.pool
+                server1.set_position(slot, row_idx)
+                server1.pool = randint(0, offspring1.pools-1)
+
+                slot = rows2[row_idx].allocate_server(server2)
+                if slot == -1: continue
+
+                server2.set_position(slot, row_idx)
+                server2.pool = randint(0, offspring2.pools-1)
+                break
+
+        # try to allocate firsts
+        for idx in range(0, len(firsts1)):
+            server1, server2 = firsts1[idx], firsts2[idx]
+            for row_idx in range(len(rows1)):
+                slot = rows1[row_idx].allocate_server(server1)
+
+                # impossible to allocate in row
+                if slot == -1: continue
+
+                server1.set_position(slot, row_idx)
+                server1.pool = randint(0, parent1.pools-1)
+
+                slot = rows2[row_idx].allocate_server(server2)
+                if slot == -1: continue
+
+                server2.set_position(slot, row_idx)
+                server2.pool = randint(0, parent1.pools-1)
+                break
     
         return [offspring1, offspring2]
 

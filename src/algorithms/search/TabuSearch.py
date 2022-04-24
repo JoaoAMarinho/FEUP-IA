@@ -2,7 +2,7 @@ from algorithms.Algorithm import *
 
 
 class TabuSearch(Algorithm):
-	def __init__(self, initial_solution, tabu_tenure=40, max_iterations=10000, max_iterations_no_imp=1000):
+	def __init__(self, initial_solution, tabu_tenure=30, max_iterations=10000, max_iterations_no_imp=1000):
 		super().__init__(initial_solution, max_iterations, max_iterations_no_imp)
 		self.tabu_tenure = tabu_tenure
 		self.tabu_memory = {}  
@@ -25,24 +25,30 @@ class TabuSearch(Algorithm):
 			iteration_no_imp += 1
 
 			neighbours = self.neighbour_solutions(solution)
-			new_solution = self.get_best_solution(neighbours)
+			new_solution = neighbours[0]
+
+			for neighbour in neighbours:
+				key = hash(neighbour)
+				if (key not in self.tabu_memory):
+					if neighbour.evaluation > new_solution.evaluation:
+						new_solution = neighbour
+				else:
+					tenure = self.tabu_memory[key].tenure
+					if tenure == 0: self.tabu_memory.pop(key)
+					else: self.tabu_memory[key].tenure = tenure - 1
+
+			if new_solution.evaluation > best_solution:
+				solution = new_solution
+				best_solution = new_solution.evaluation
+				iteration_no_imp = 0
 
 			key = hash(new_solution)
-			if key not in self.tabu_memory:
-				if new_solution.evaluation > best_solution:
-					iteration_no_imp = 0
-					solution = new_solution
-					best_solution = new_solution.evaluation
-					self.tabu_memory[key] = solution
-					self.tabu_memory[key].tenure = self.tabu_tenure
-				solution.time = perf_counter() - start
-				self.write_to_file(file, solution, iteration)
-			else:
-				tenure = self.tabu_memory[key].tenure
-				if tenure == 0: self.tabu_memory.pop(key)
-				else: self.tabu_memory[key].tenure = tenure - 1
+			self.tabu_memory[key] = new_solution
+			self.tabu_memory[key].tenure = self.tabu_tenure
 
-
+			solution.time = perf_counter() - start
+			self.write_to_file(file, solution, iteration)
+			
 		elapsed = perf_counter() - start
 		solution.time = elapsed
 		self.close_file(file)
