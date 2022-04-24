@@ -13,7 +13,7 @@ class GeneticAlgorithm(Algorithm):
                  population_size=30,
                  mutation_threshold=0.2,
                  selection_method=TournamentSelection(),
-                 crossover_method=PoolsCrossover()):
+                 crossover_method=ServersCrossover()):
 
         super().__init__(max_iterations, max_iterations_no_imp)
         self.population_size = population_size

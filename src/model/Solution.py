@@ -10,6 +10,7 @@ class Solution:
         self.servers = servers
         self.pools = pools
         self.evaluate()
+
     
     def __str__(self):
         str_repr = ':::::::::::::::::::::::::::::::: rows ::::::::::::::::::::::::::::::::n'
@@ -65,3 +66,4 @@ class Solution:
             evaluation = min(evaluation, guaranteed_cap)
 
         self.evaluation = evaluation
+
