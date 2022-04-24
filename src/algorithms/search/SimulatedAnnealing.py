@@ -12,18 +12,7 @@ class SimulatedAnnealing(Algorithm):
     def schedule_temperature(self, t):
         return t * self.temp_decrease_factor
 
-    def write_to_file(self, file, solution, iteration):
-        data = {'evaluation': solution.evaluation,
-                'time': solution.time,
-                'iteration': iteration,
-                'temperature': solution.temp,
-                'initial temperature': solution.initial_temp}
-
-        with open(file, 'a') as outfile:
-            outfile.write(json.dumps(data)+',\n')
-            outfile.close()
-
-    def execute(self, callback, file = 'simulated_annealing_5.json'):
+    def execute(self, callback):
         start = perf_counter()
         iteration = 0
         iteration_no_imp = 0
@@ -32,11 +21,7 @@ class SimulatedAnnealing(Algorithm):
         evaluation = solution.evaluation
         temperature = self.initial_temp
 
-        self.open_file(file)
         solution.time = perf_counter() - start
-        solution.temp = temperature
-        solution.initial_temp = self.initial_temp
-        self.write_to_file(file, solution, iteration)
 
         while not self.stop(iteration, iteration_no_imp):
             iteration += 1
@@ -51,17 +36,12 @@ class SimulatedAnnealing(Algorithm):
             delta_evaluation = neighbour_evaluation - evaluation
 
             if delta_evaluation > 0 or random.uniform(0.0, 1.0) <= exp(delta_evaluation/temperature):
-                neighbour.temp = temperature
-                neighbour.initial_temp = self.initial_temp
                 solution = neighbour
                 evaluation = neighbour_evaluation
                 iteration_no_imp = 0
 
-            solution.time = perf_counter() - start
-            self.write_to_file(file, solution, iteration)
 
         elapsed = perf_counter() - start
-        self.close_file(file)
         solution.time = elapsed
 
         callback(solution)

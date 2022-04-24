@@ -12,7 +12,6 @@ class CrossoverMethod(ABC):
     def run(self, parent1, parent2):
         pass
 
-
 class ServersCrossover(CrossoverMethod):
 
     def run(self, parent1, parent2):
@@ -60,9 +59,6 @@ class ServersCrossover(CrossoverMethod):
                     server1.set_pool = initial_server2.pool
     
         return [offspring1, offspring2]
-
-
-
 
 class PoolsCrossover(CrossoverMethod):
 

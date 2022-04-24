@@ -7,7 +7,7 @@ class TabuSearch(Algorithm):
 		self.tabu_tenure = tabu_tenure
 		self.tabu_memory = {}  
 
-	def execute(self, callback, file = 'tabu_search_5.json'):
+	def execute(self, callback):
 		start = perf_counter()
 
 		iteration = 0
@@ -15,10 +15,6 @@ class TabuSearch(Algorithm):
 
 		solution = self.initial_solution
 		best_solution = solution.evaluation
-
-		self.open_file(file)
-		solution.time = perf_counter() - start
-		self.write_to_file(file, solution, iteration)
 		
 		while not self.stop(iteration, iteration_no_imp):
 			iteration += 1
@@ -35,8 +31,6 @@ class TabuSearch(Algorithm):
 					best_solution = new_solution.evaluation
 					self.tabu_memory[key] = solution
 					self.tabu_memory[key].tenure = self.tabu_tenure
-				solution.time = perf_counter() - start
-				self.write_to_file(file, solution, iteration)
 			else:
 				tenure = self.tabu_memory[key].tenure
 				if tenure == 0: self.tabu_memory.pop(key)
@@ -45,7 +39,6 @@ class TabuSearch(Algorithm):
 
 		elapsed = perf_counter() - start
 		solution.time = elapsed
-		self.close_file(file)
 
 		callback(solution)
 		return solution

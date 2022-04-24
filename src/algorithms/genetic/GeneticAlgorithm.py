@@ -17,7 +17,6 @@ class GeneticAlgorithm(Algorithm):
                  crossover_method=PoolsCrossover()):
 
         super().__init__(max_iterations, max_iterations_no_imp)
-        self.max_iterations_no_imp = 1000
         self.population_size = population_size
         self.initial_solution = initial_solution
         self.mutation_threshold = mutation_threshold
@@ -83,21 +82,8 @@ class GeneticAlgorithm(Algorithm):
 
         return new_population
 
-    def write_to_file(self, file, solution, iteration):
-        crossover = "servers crossover"
-        selection = "tournament selection"
-        data = {'evaluation': solution.evaluation,
-                'time': solution.time,
-                'iteration': iteration,
-                'initial population': self.population_size,
-                'crossover method': crossover,
-                'selection method': selection}
 
-        with open(file, 'a') as outfile:
-            outfile.write(json.dumps(data,default=vars)+',\n')
-            outfile.close()
-
-    def execute(self, callback, file = 'genetic_algorithm_5.json'):
+    def execute(self, callback):
 
         """
         Runs the genetic algorithm
@@ -114,9 +100,7 @@ class GeneticAlgorithm(Algorithm):
         population = self.initial_population()
         fittest = self.fittest_chromosome(population)
 
-        self.open_file(file)
         fittest.time = perf_counter() - start
-        self.write_to_file(file, fittest, iteration)
 
         while not self.stop(iteration, iteration_no_imp):
             iteration += 1
@@ -129,12 +113,9 @@ class GeneticAlgorithm(Algorithm):
             if new_fittest.evaluation > fittest.evaluation:
                    fittest = new_fittest
                    iteration_no_imp = 0
-            fittest.time = perf_counter() - start       
-            self.write_to_file(file,fittest, iteration)
 
         elapsed = perf_counter() - start
         fittest.time = elapsed
-        self.close_file(file)
 
         callback(fittest)
         return fittest

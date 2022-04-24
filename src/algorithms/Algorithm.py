@@ -189,22 +189,5 @@ class Algorithm(ABC):
     def get_best_solution(self, solution):
         return max(solution, key= lambda sol: sol.evaluation)
 
-    def open_file(self, file):
-        with open(file, 'w') as outfile:
-            outfile.write('{"data": [\n')
-
-    def write_to_file(self, file,solution, iteration):
-        data = {'evaluation': solution.evaluation,
-                'time': solution.time,
-                'iteration': iteration}
-
-        with open(file, 'a') as outfile:
-            outfile.write(json.dumps(data)+',\n')
-            outfile.close()
-
-    def close_file(self, file):
-        with open(file, 'a') as outfile:
-            outfile.write(']}')
-
     def set_initial_solution(self, initial_solution):
         self.initial_solution = initial_solution

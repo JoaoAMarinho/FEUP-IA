@@ -33,10 +33,6 @@ class Solution:
     def __hash__(self):
         return reduce(lambda hash, s2: hash * abs(s2.id + s2.row + s2.pool + s2.slot), self.servers, 0)
 
-    def __lt(self, sol):
-        if not isinstance(sol, self.__class__): return False
-        return sol.evaluation < self.evaluation
-
     def evaluate(self):
         guaranteed_capacity = [0 for _ in range(self.pools)]
         max_row_capacity = [0 for _ in range(self.pools)]

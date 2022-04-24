@@ -12,7 +12,6 @@ class SelectionMethod(ABC):
     def run(self, population):
         pass
 
-
 class TournamentSelection(SelectionMethod):
     """
     Selects two chromosomes creating two random groups, selecting the best chromosome on both of them
@@ -42,7 +41,6 @@ class TournamentSelection(SelectionMethod):
             selection.append(fittest)
         
         return selection
-
 
 class RoulleteSelection(SelectionMethod):
     """

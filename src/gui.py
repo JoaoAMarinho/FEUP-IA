@@ -26,7 +26,6 @@ BASE_COLOR = (48, 106, 138)
 
 SCREEN = pygame.display.set_mode((1800, 900))
 
-
 class Gui():
     def __init__(self):
         pygame.init()
@@ -64,7 +63,6 @@ class Gui():
             pygame.display.flip()
             self.clock.tick(60)
 
-
 class Menu():
     def __init__(self):
         self.display_surface = pygame.display.get_surface()
@@ -89,7 +87,6 @@ class Menu():
         mainMenuText = font.render('Main Menu', True, WHITE)
         self.display_surface.blit(
             mainMenuText, (1505 - (mainMenuText.get_width()/2), 55 - offset_y - (mainMenuText.get_height()/2)))
-
 
 class MainMenu(Menu):
     def __init__(self):
@@ -149,7 +146,6 @@ class MainMenu(Menu):
             pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_IBEAM)
         elif self.info_circle.collidepoint(event.pos):
             pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
-
 
 class AlgorithmMenu(Menu):
     def __init__(self, file):
@@ -230,7 +226,6 @@ class AlgorithmMenu(Menu):
         elif self.mainMenuButton.collidepoint(event.pos):
             pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
 
-
 class InstructionsMenu(Menu):
     def __init__(self):
         super().__init__()
@@ -280,7 +275,6 @@ class InstructionsMenu(Menu):
 
         if self.mainMenuButton.collidepoint(event.pos):
             pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
-
 
 class SolutionMenu(Menu):
     def __init__(self, algorithm):
