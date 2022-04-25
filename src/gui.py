@@ -291,6 +291,7 @@ class SolutionMenu(Menu):
 
     def finish_execute(self, solution):
         self.solution = solution
+        print(solution)
         self.loading = False
         self.set_max_offset()
         self.set_pool_colors()
