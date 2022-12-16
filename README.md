@@ -1,4 +1,4 @@
-# FEUP-COMP 2021/2022
+# FEUP-IA 2021/2022
 Machine Learning projects for the IA curricular unit.
 
 ### Project Infos
